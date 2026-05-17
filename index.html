@@ -1,390 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styless.css"> <!-- link to a CSS file -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dhiraj Gupta | Senior QA Automation Engineer</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f7fa;color:#333;line-height:1.6}
+    header{background:linear-gradient(135deg,#1F4E79,#2E75B6);color:#fff;padding:40px 0;text-align:center}
+    header h1{font-size:2.4rem;font-weight:700;letter-spacing:1px}
+    header .subtitle{font-size:1.05rem;margin-top:8px;opacity:.9}
+    header .contact{margin-top:14px;font-size:.95rem;opacity:.85}
+    header .contact a{color:#BDD7EE;text-decoration:none}
+    header .contact a:hover{text-decoration:underline}
+    nav{background:#1F4E79;position:sticky;top:0;z-index:100;text-align:center;padding:10px 0;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+    nav a{color:#BDD7EE;text-decoration:none;margin:0 12px;font-size:.9rem;font-weight:500;transition:color .2s}
+    nav a:hover{color:#fff}
+    .container{max-width:1000px;margin:0 auto;padding:30px 20px}
+    section{margin-bottom:36px}
+    h2{font-size:1.3rem;font-weight:700;color:#1F4E79;border-bottom:3px solid #2E75B6;padding-bottom:6px;margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em}
+    h3{font-size:1.05rem;font-weight:600;color:#1F4E79;margin-bottom:4px}
+    p{color:#555;margin-bottom:10px;font-size:.95rem}
+    ul{padding-left:20px;color:#555;font-size:.95rem}
+    ul li{margin-bottom:5px}
+    .card{background:#fff;border-radius:8px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,.08);margin-bottom:14px}
+    .skills-table{width:100%;border-collapse:collapse;font-size:.9rem}
+    .skills-table td{padding:8px 10px;border:1px solid #D6E4F0;vertical-align:top}
+    .skills-table .cat{background:#D6E4F0;color:#1F4E79;font-weight:600;width:160px;white-space:nowrap}
+    .core-comp{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{background:#EBF3FB;color:#1F4E79;border:1px solid #BDD7EE;border-radius:20px;padding:4px 12px;font-size:.82rem;font-weight:500}
+    .tag.ai{background:#E1F5EE;color:#0F6E56;border-color:#5DCAA5}
+    .exp-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px}
+    .exp-company{font-size:.9rem;color:#595959;font-style:italic}
+    .exp-dates{font-size:.85rem;color:#888;white-space:nowrap}
+    .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+    .proj-card{background:#fff;border-radius:8px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.08);border-top:3px solid #2E75B6}
+    .proj-card.ai{border-top-color:#0F6E56}
+    .proj-card h4{font-size:.95rem;font-weight:600;color:#1F4E79;margin-bottom:4px}
+    .proj-card .tech{font-size:.8rem;color:#888;font-style:italic;margin-bottom:8px}
+    .proj-card p{font-size:.85rem;color:#555;margin-bottom:10px}
+    .proj-card a{font-size:.82rem;color:#2E75B6;text-decoration:none;font-weight:500}
+    .proj-card a:hover{text-decoration:underline}
+    .cert-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+    .cert-card{background:#fff;border-radius:8px;padding:14px 16px;box-shadow:0 1px 4px rgba(0,0,0,.08);border-left:4px solid #2E75B6}
+    .cert-card h4{font-size:.92rem;font-weight:600;color:#1F4E79;margin-bottom:2px}
+    .cert-card span{font-size:.82rem;color:#888}
+    .highlight-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .highlight-item{background:#fff;border-radius:8px;padding:12px 14px;box-shadow:0 1px 4px rgba(0,0,0,.08);font-size:.88rem;color:#555;border-left:3px solid #2E75B6}
+    footer{background:#1F4E79;color:#BDD7EE;text-align:center;padding:24px;font-size:.9rem}
+    footer a{color:#BDD7EE}
+    @media(max-width:600px){
+      header h1{font-size:1.7rem}
+      .exp-header{flex-direction:column}
+      .highlight-list{grid-template-columns:1fr}
+      nav a{margin:0 6px;font-size:.8rem}
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>
-            <img src="SoftwareQADesign.png" alt="Software QA Engineer badge" class="header-image"> <!-- Prfile image -->
-            Dhiraj Gupta
-        </h1>
-        <p><strong>Email:</strong> <a href="mailto:dhirajgupta@hotmail.com" aria-label="Email Dhiraj Gupta">dhirajgupta@hotmail.com</a> | <strong>Phone:</strong> 732 599 5019</p>
-    </header>
-    
 
-<!-- Navigation Menu -->
-    <nav role="navigation" aria-label="Main Navigation">
-        <ul class="menu" aria-label="Navigation menu">
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#Certifications">Certifications</a></li>
-            <li><a href="#Education">Education</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Highlights">Highlights</a></li>
-            <li><a href="#Automation">Automation</a></li>
-            <li><a href="#Software-QA-Skills">Software-QA-Skills</a></li>
-            <li><a href="#Experience">Experience</a></li>
-        </ul>
-    </nav>
+<header>
+  <h1>Dhiraj Gupta</h1>
+  <div class="subtitle">Senior QA Automation Engineer &nbsp;|&nbsp; AI &amp; GenAI Testing Specialist &nbsp;|&nbsp; 23+ Years</div>
+  <div class="contact">
+    Keyport, NJ &nbsp;|&nbsp; 732.599.5019 &nbsp;|&nbsp;
+    <a href="mailto:dhirajgupta@hotmail.com">dhirajgupta@hotmail.com</a> &nbsp;|&nbsp;
+    <a href="https://github.com/rinkugupta3" target="_blank">github.com/rinkugupta3</a>
+  </div>
+</header>
 
-    <section id="about" aria-labelledby="about">
-        <h2>About Me</h2>
-        <p> Highly skilled professional and detail-oriented team player with more
-            than 15 years of experience in software quality assurance and team
-            lead with stellar record of collaborating with software developers to
-            produce robust, bug-free software that meets business and consumer
-            needs. Experience in analyzing and improving software development
-            processes and supporting teams in meeting critical project deadlines.
-            Excellent skills in capturing and documenting defects, solutions, test cases,
-            and test plans accurately and clearly across diverse teams.
-            Ability to handle multiple projects simultaneously with a high degree of
-            accuracy. Solid knowledge in customer interface and UAT testing. Strong
-            knowledge in both manual and automation testing. Expert in installing,
-            maintaining, and supporting different environments. Knowledge of
-            Software Development Life Cycle (SDLC), Testing Life Cycle (TLC),
-            Testing Methodologies, and Techniques.
-            Experience in Agile (SAFe, Scrum, Kanban, Crystal, Lean, Extreme
-            Programming (XP), Waterfall, Feature Driven Development, and DevOps
-            Methodology. Experience in CI/CD principles. Experience in TDD (Test
-            Driven Development) and BDD (Behavioral Driven Development).
-            Excellent interpersonal, verbal, technical, and written communication
-            skills, along with project management expertise.</p>
-    </section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#core">Competencies</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#education">Education</a>
+</nav>
 
-    <section id="Certifications" aria-labelledby="Certifications">
-        <h3>Certifications</h3>
-        <ol> <!-- ordered list - For sequential items -->
-            <li>Certified Azure Fundamental AZ-900</li>
-            <li>Certified Scrum Master (CSM)</li>
-            <li>Certified Scrum Prodcut Owner (CSPO)</li>
-            <li>Project Management Professional (PMP)</li>
-        </ol>
-    </section>
+<div class="container">
 
-    <section id="Education" aria-labelledby="Education">
-        <h4>Education</h4>
-        <ul>
-            <li><strong>Bachelor of Science, Computer Science</strong> - DeVry University, Ontario, Canada</li>
-            <li><strong>Bachelor of Science, Electronics Engineering</strong> - DeVry University, Ontario, Canada</li>
-            <li><strong>Bachelor of Arts, Economics</strong> - Guru Nanak Dev University, Punjab, India</li>
-        </ul>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>Senior QA Automation Engineer with <strong>23+ years</strong> of enterprise experience, including 17+ years at <strong>AT&amp;T Labs</strong>, specializing in AI/GenAI QA frameworks, RAG pipeline validation, and LLM evaluation. Delivered 35% testing efficiency gains and 99.8% accuracy through AI-driven automation across web, mobile, API, and cloud platforms.</p>
+      <p>T-shaped QA leader with deep automation expertise and broad cross-functional knowledge across AI, mobile, cloud, and accessibility domains. Expert in Playwright, Selenium, and Appium with deep hands-on experience building privacy-first RAG pipelines, prompt injection security testing, and multi-LLM agent automation. Proven cloud delivery on AWS and Azure with CI/CD-integrated test pipelines across Agile/SAFe and DevOps environments.</p>
+      <p>Domain expertise includes: <strong>Telecom (AT&amp;T)</strong>, <strong>Banking &amp; Wealth Management (Northern Trust)</strong>, <strong>Insurance (Country Wide)</strong>, and <strong>Logistics (FedEx)</strong>.</p>
+    </div>
+  </section>
 
-    </section>
+  <!-- CORE COMPETENCIES -->
+  <section id="core">
+    <h2>Core Competencies</h2>
+    <div class="card">
+      <div class="core-comp">
+        <span class="tag ai">AI/GenAI QA</span><span class="tag ai">LLM Evaluation</span><span class="tag ai">RAG Validation</span><span class="tag ai">Prompt Injection Testing</span><span class="tag ai">LangChain</span><span class="tag ai">Ollama</span><span class="tag ai">ChromaDB</span>
+        <span class="tag">Playwright</span><span class="tag">Selenium WebDriver</span><span class="tag">Cypress</span><span class="tag">Appium</span><span class="tag">PyTest</span><span class="tag">Cucumber/BDD</span>
+        <span class="tag">E2E Testing</span><span class="tag">Cross-Browser Testing</span><span class="tag">Data-Driven Testing</span><span class="tag">UI/UX Testing</span><span class="tag">Load Testing</span><span class="tag">Performance Testing</span><span class="tag">Accessibility (WCAG)</span>
+        <span class="tag">Root Cause Analysis</span><span class="tag">Cross-Functional Leadership</span><span class="tag">Team Mentoring</span><span class="tag">Test Planning</span><span class="tag">Defect Tracking</span>
+        <span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span>
+        <span class="tag">Kubernetes/AKS</span><span class="tag">Salesforce</span><span class="tag">ServiceNow</span><span class="tag">AWS</span><span class="tag">Azure DevOps</span><span class="tag">Docker</span><span class="tag">CI/CD</span><span class="tag">Agile/SAFe</span><span class="tag">API Testing</span><span class="tag">Mobile Testing</span>
+      </div>
+    </div>
+  </section>
 
-    <section id="Skills" aria-labelledby="Skills">
-        <h5>Skills</h5>
-        <ul>
-            <li><strong>Methodologies:</strong> Agile-Scrum, Kanban, SAFe, Waterfall, DevOps.</li>
-            <li><strong>Management Tools:</strong> JIRA, Dev-Ops, Rally, TDP (Technology Delivery
-                Process), iTrack, SharePoint, Miro, MS Project, MS Office, MS Visio, Tableau.</li>
-            <li><strong>Automation and Testing Tools:</strong> Playwright, Selenium WebDriver-IDE, BDD Cucumber Gerkin, QTP (Quick
-                Test Professional) Micro Fous UFT (Unified Functional Testing), Cypress, Appium, Quality Center (QC), Test Link, GEB, GROOVY, SPOCK, SQL
-                Developer, TOAD for Sybase, Load Runner, Win Runner, Test Director,
-                Rational Robot, Rational Clear Quest, JMeter.</li>
-            <li><strong> Test Strategies:</strong>  UAT (User Acceptance Testing), MAT (Migration
-                Acceptance Testing), Connectivity testing, Integration, System,
-                Regression, White box, Black Box, Soak Testing, Sanity Testing, Alpha
-                Testing, Beta Testing, Pen Testing, Automation.</li>
-                <li><strong>Operating Systems:</strong> Unix, Linux, Microsoft Azure DevOps, Ubuntu. </li>
-            <li><strong>Databases:</strong>  Oracle, Postgress SQL, Times Ten, Sybase, Microsoft SQL Server (RDBMS), Microsoft Access (Desktop Database Management System), 
-                Microsoft SQL Server Management Studio (SSMS) Management tool, SQL Lite, MongoDB.</li>
-            <li><strong>Script & API:</strong> JSON, Curl, Shell Script, JavaScript, HTML, REST API</li>
-            <li><strong>Code Technologies:</strong>  Microsoft Azure (VMSS, VM, SSH, EFORC, Baston,
-                Kubernetes), Microsoft Azure DevOps Tools (Pipelines, Release
-                pipelines, Azure DevOps Boards), AT&T Code Cloud (Eclipse, Angular,
-                Kafka, Git Hub, Git Extension, Git Bash, IntelliJ Idea, Maven), AKS
-                (Azure Kubernetes Services), Docker, Docker Images, Container
-                Orchestration, Prometheus, Grafana (matrix).</li>
-            <li><strong>Web Services:</strong>  SOAP, REST, WSDL, XML, XSD, XSLT, XPATH, JSON, Postman, SoapUI, Swagger, JIRA, Confluence, Trello, Slack, Microsoft Teams, Zoom, WebEx, Skype, Google Meet.</li>
-            <li><strong>Source Control Tools:</strong> Putty-Pageant, Telnet, Putty, Mremote,
-                MTremote, JMeter, Postman, Soap UI, Fiddler, SQL developer,
-                Eclipse, Sun Toss, VNC (Virtual Network Computing), Windows XP professional, MS Word, MS Excel, XML, Unix, MS PowerPoint, MS
-                Excel Macro (with data source configured to fetch data), MS Visual
-                Source Safe, SSH, FTP, SFTP, WinSCP, FileZilla.</li>
-            <li><strong>Web-Accessibility Testing Tools:</strong> Web Content Accessibility
-                Guidelines (WCAG), Acid tool, Fire Eye, Firebug, JAWS, NVDA Screen
-                Reader, Keyboard, WAT (Web Accessibility Evaluation tool), HTML
-                Validator, ANDI (Accessible Name & Description Inspector), Color
-                Contrast Analyzer (CCA), AT&T Brand Color Contrast Checker, Talk
-                back for Android, Voice over for iOS, Bluetooth Keyboards, WAVE
-                (Web Accessibility Evaluation tool).</li>
-        </ul>
-    </section>
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills &amp; Abilities</h2>
+    <div class="card">
+      <table class="skills-table">
+        <tr><td class="cat">AI &amp; GenAI</td><td>LLM Evaluation, RAG Pipelines, LangChain, Ollama, CrewAI, Gemma, ChromaDB, Semantic Similarity, Prompt Injection Security, GenAI QA, NLP Integration, AI Model A/B Testing, AI-Driven Test Generation</td></tr>
+        <tr><td class="cat">AI IDEs &amp; Agents</td><td>Cursor AI, Google Antigravity, Codeium Windsurf, Claude Code, GitHub Copilot, VS Code Copilot, Google AI Studio</td></tr>
+        <tr><td class="cat">Automation Tools</td><td>Playwright, Selenium WebDriver, Cypress, Appium, PyTest, Cucumber/BDD, UFT, QTP, GEB, Groovy, Spock, JMeter, LoadRunner, SoapUI, Swagger, Fiddler, Wireshark, Rational Robot</td></tr>
+        <tr><td class="cat">Languages &amp; API</td><td>Python, TypeScript, Java, Node.js, JavaScript, Shell, JSON, HTML, CSS, XML, REST API, SOAP, WSDL, VBScript, Curl</td></tr>
+        <tr><td class="cat">Cloud &amp; DevOps</td><td>AWS, Microsoft Azure (AKS, VMSS, VM, Bastion, Kubernetes), Azure DevOps, Docker, Jenkins, CI/CD Pipelines, ServiceNow, Salesforce, MuleSoft, Prometheus, Grafana, kubectl, LENS</td></tr>
+        <tr><td class="cat">Testing Expertise</td><td>Manual, Automation, UI, UX, API, Functional, Regression, Performance, Load, Stress, Soak, Smoke, Sanity, End-to-End (E2E), Cross-Browser, Cross-Platform, Data-Driven, Compatibility, Exploratory, Integration, System, UAT, MAT, Penetration, Contract, Negative/Boundary, White Box, Black Box, Volume, Scalability, Reliability, Recovery, Alpha, Beta, Ad-hoc, AI-Driven</td></tr>
+        <tr><td class="cat">Test Management</td><td>Jira, Zephyr, TestRail, HP ALM, Quality Center, Rally, DevOps Boards, TDP, iTrack, SharePoint, MS Project, Confluence, Trello</td></tr>
+        <tr><td class="cat">Methodologies</td><td>Agile/Scrum, SAFe, Kanban, Lean, XP, Waterfall, TDD, BDD, DevOps, SDLC, Feature Driven Development</td></tr>
+        <tr><td class="cat">Accessibility</td><td>WCAG 2.0/2.1, Axe-Core, Lighthouse, JAWS, NVDA, WAVE, ANDI, iOS VoiceOver, Android TalkBack, Fire Eye, Firebug, Color Contrast Analyzer, ACID tool</td></tr>
+        <tr><td class="cat">Databases</td><td>Oracle, PostgreSQL, MS SQL Server, MongoDB, ChromaDB, TimesTen, Sybase, MS Access, SQLite</td></tr>
+        <tr><td class="cat">Operating Systems</td><td>Windows, Unix, Linux (CLI, Scripting), Ubuntu, Microsoft Azure</td></tr>
+        <tr><td class="cat">Dev Tools</td><td>Eclipse, IntelliJ, Maven, Angular, Kafka, GitHub, Git Bash, Git Extensions, SQL Developer, TOAD, Postman, Citrix, VNC, WinSCP, FileZilla, Putty</td></tr>
+        <tr><td class="cat">Web Services</td><td>SOAP, REST, WSDL, XML, XSD, XSLT, XPATH, JSON, Postman, SoapUI, Swagger, Fiddler</td></tr>
+      </table>
+    </div>
+  </section>
 
-    <section id="Projects" aria-labelledby="Projects">
-        <h6>Projects</h6>
-        <ul>
-            <li>Project 1 (Playwright_Automation_Dockerfile): <a href="https://github.com/rinkugupta3/Playwright_Automation_Dockerfile" target="_blank" aria-label="View Project 1 on GitHub">Link to project</a></li>
-            <li>Project 2 (Playwright_Automation_DesignSetup): <a href="https://github.com/rinkugupta3/Playwright_Automation_DesignSetup" target="_blank" aria-label="View Project 2 on GitHub">Link to project</a></li>
-            <li>Project 3 (Tableau Tesla Data Analyzed): <a href="https://public.tableau.com/app/profile/dhiraj.gupta2694/viz/08_TeslaData_GoogleDriveDoc/Dashboard" target="_blank" aria-label="View Project 3 on Tableau">Link to project</a></li>
-            <li>Project 4 (Jira tool - Agile Scrum Board): <a href="https://dhirajgupta.atlassian.net/jira/software/c/projects/SSP/boards/3/backlog" target="_blank" aria-label="View Project 4 on Jira">Link to project</a></li>
-            <li>Project 5 (HTML CSS - Portfolio-Resume): <a href="https://github.com/rinkugupta3/HTML_CSS_Portfolio" target="_blank" aria-label="View Project 5 on GitHub">Link to project</a></li>
-        </ul>
-    </section>
-    
-    <section id="Highlights" aria-labelledby="Highlights">
-        <h6>Highlights</h6>
-        <ul>
-            <li>Experience in TDD (Test Driven Development) and BDD (Behavioral Driven Development).</li>
-            <li>Software Development Life Cycle (SDLC), Testing Life Cycle (TLC), Testing Methodologies and Techniques.</li>
-            <li>Experience managing cross-functional teams with members located locally and globally.</li>
-            <li>Strong problem-solving & technical skills coupled with confident decision-making for enabling effective solutions and delivering high-quality software.</li>
-            <li>Significant experience working with local as well as overseas development and technical teams for executing concurrent projects.</li>
-            <li>Domain expertise includes Teleconference, Cards, Payment Services, Wealth Management under Banking & Financial Services, and code set rules under Healthcare.</li>
-            <li>Experience in SAFe, Scrum, Agile, Waterfall, Feature Driven Development, and DevOps Methodology.</li>
-            <li>Experience using project management software such as Jira, TDP (Technology Delivery Process), Rally, and Microsoft Azure DevOps.</li>
-            <li>Motivated, thorough, dependable, and well-organized team player with good interpersonal skills.</li>
-            <li>Experience in developing CI/CD principles.</li>
-        </ul>
-    </section>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Personal Projects Portfolio</h2>
+    <p style="font-size:.85rem;color:#888;margin-bottom:14px">All projects: <a href="https://github.com/rinkugupta3" target="_blank">github.com/rinkugupta3</a></p>
+    <div class="proj-grid">
+      <div class="proj-card ai">
+        <h4>AI_RAG_Ollama_VectorLink</h4>
+        <div class="tech">Python · LangChain · Ollama · Gemma · ChromaDB · SQL Server · Playwright</div>
+        <p>Privacy-first RAG pipeline ingesting enterprise legal/technical PDFs, storing vector embeddings in SQL Server, and auto-generating Gherkin test cases and Playwright scripts — 100% local, no cloud required.</p>
+        <a href="https://github.com/rinkugupta3/AI_RAG_Ollama_VectorLink" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card ai">
+        <h4>GenAI_QA_Framework</h4>
+        <div class="tech">Python · PyTest · Playwright · Google Gemini API</div>
+        <p>Comprehensive QA framework for GenAI apps: LLM accuracy, RAG retrieval, prompt injection security, semantic similarity, and REST API SLA testing. 36 mock + 9 live Gemini API tests.</p>
+        <a href="https://github.com/rinkugupta3/GenAI_QA_Framework" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card ai">
+        <h4>AI_Agent_QA_Web_Automation_LLM</h4>
+        <div class="tech">Python · Gradio · Browser-Use · OpenAI · Anthropic · Azure · Google LLMs</div>
+        <p>Gradio-based WebUI for controlling AI agents that autonomously browse and automate web tasks. Supports multiple LLM providers, persistent browser sessions, and HD screen recording.</p>
+        <a href="https://github.com/rinkugupta3/AI_Agent_QA_Web_Automation_LLM_BrowserUse_WebUI" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card ai">
+        <h4>AutoJobSearch_Antigravity</h4>
+        <div class="tech">Python · Playwright · Regex · Gmail SMTP · Windows Task Scheduler</div>
+        <p>AI-powered job market intelligence tool: automates LinkedIn searches with native event simulation, regex filtering for senior/lead roles, session injection, and scheduled daily HTML email reports.</p>
+        <a href="https://github.com/rinkugupta3/AutoJobSearch_Antigravity" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card ai">
+        <h4>AI_RAG_Ollama_LangChain_Gemma</h4>
+        <div class="tech">Python · LangChain · Ollama · Gemma · NLP</div>
+        <p>Local NLP Intelligence Engine using LangChain + Ollama + Gemma for document Q&amp;A with vector retrieval — no cloud dependency or API key required.</p>
+        <a href="https://github.com/rinkugupta3/AI_RAG_Ollama_LangChain_Gemma_NPL_LLM_VectorLink" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card ai">
+        <h4>AI_RAG_Ollama_CrewAI_Agents</h4>
+        <div class="tech">Python · CrewAI · Ollama · Gemma · LLM Agents</div>
+        <p>Multi-agent RAG system using CrewAI orchestration with locally-hosted Gemma for collaborative AI-driven document intelligence and QA test generation.</p>
+        <a href="https://github.com/rinkugupta3/AI_RAG_Ollama_CrewAI_Agents_Gemma_NPL_LLM_VectorLink" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card">
+        <h4>Playwright_Login_Logout Framework</h4>
+        <div class="tech">Playwright · Python · JSON Config · BDD</div>
+        <p>Data-driven login/logout test framework using JSON-based configuration for multi-environment and multi-credential automated test execution.</p>
+        <a href="https://github.com/rinkugupta3/Automation_Login_Logout_TestingFramework_with_Json_Config_Playwright" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card">
+        <h4>Selenium_Azure_BDD</h4>
+        <div class="tech">Selenium WebDriver · Java · Azure DevOps · Cucumber/BDD</div>
+        <p>BDD-style Selenium automation for multi-scenario web validation, integrated with Azure DevOps CI/CD pipelines for continuous test execution.</p>
+        <a href="https://github.com/rinkugupta3/Selenium_Automation_Azure_BDD_MultipleAppleSearch" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card">
+        <h4>Automation_Accessibility</h4>
+        <div class="tech">Playwright · Python · Axe-Core · WCAG 2.1</div>
+        <p>Comprehensive accessibility testing framework validating WCAG 2.1 compliance using Axe-Core and Lighthouse within Playwright for automated disability access checks.</p>
+        <a href="https://github.com/rinkugupta3/Automation_Accessibility" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card">
+        <h4>Node.js_SQL_API_Postman</h4>
+        <div class="tech">Node.js · SQL Server · REST API · Postman</div>
+        <p>Full-stack REST API server integrating Node.js with SQL Server via SSMS, with Postman test suites for endpoint validation and data integrity checks.</p>
+        <a href="https://github.com/rinkugupta3/Node-js-SQL-API-Server-Postman-SSMS-Integration" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card">
+        <h4>JMeter_Performance_Testing</h4>
+        <div class="tech">Apache JMeter · Load Testing</div>
+        <p>Enterprise performance, load, and stress testing suite using Apache JMeter for throughput benchmarking, bottleneck detection, and SLA validation.</p>
+        <a href="https://github.com/rinkugupta3/JMeter" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="proj-card">
+        <h4>Automation_Mobility_Appium</h4>
+        <div class="tech">Appium · Python/Java · Android · iOS</div>
+        <p>Mobile test automation framework for native and hybrid Android/iOS apps using Appium, covering gesture simulation and cross-platform compatibility.</p>
+        <a href="https://github.com/rinkugupta3/Automation_Mobility_Appium" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="Automation" aria-labelledby="Automation">
-        <h6>Automation</h6>
-        <ul>
-            <li>Playwright</li>
-            <li>Selenium WebDriver</li>
-            <li>BDD Cucumber Gerkin</li>
-            <li>QTP (QuickTest Professional) Micro Focus UFT (Unified Functional Testing),</li>
-            <li>Cypress</li>
-            <li>Postman</li>
-            <li>SoapUI</li>
-            <li>JMeter</li>
-            <li>Load Runner</li>
-            <li>Appium</li>
-        </ul>
-    </section>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Professional Experience</h2>
 
-    <section id="Software-QA-Skills" aria-labelledby="Software-QA-Skills">
-        <h6>Software-QA-Skills</h6>
-        <ul style="columns: 6;">
-            <li>Manual Testing</li>
-            <li>Automation Testing</li>
-            <li>Performance Testing</li>
-            <li>Security Testing</li>
-            <li>API Testing</li>
-            <li>Mobile Testing</li>
-            <li>Web Testing</li>
-            <li>Database Testing</li>
-            <li>Regression Testing</li>
-            <li>Smoke Testing</li>
-            <li>UAT Testing</li>
-            <li>Functional Testing</li>
-            <li>Integration Testing</li>
-            <li>System Testing</li>
-            <li>Black Box Testing</li>
-            <li>White Box Testing</li>
-            <li>End-to-End Testing</li>
-            <li>Exploratory Testing</li>
-            <li>Ad-hoc Testing</li>
-            <li>Compatibility Testing</li>
-            <li>Usability Testing</li>
-            <li>Accessibility Testing</li>
-            <li>Localization Testing</li>
-            <li>Installation Testing</li>
-            <li>Configuration Testing</li>
-            <li>Load Testing</li>
-            <li>Stress Testing</li>
-            <li>Volume Testing</li>
-            <li>Scalability Testing</li>
-            <li>Reliability Testing</li>
-            <li>Recovery Testing</li>
-            <li>Maintenance Testing</li>
-            <li>Compliance Testing</li>
-            <li>Penetration Testing</li>
-            <li>Quality Control Testing</li>
-            <li>Data Quality Engineering</li>
-            <li>Results and Deadline-Driven</li>
-            <li>Automated Testing Frameworks</li>
-            <li>Testing Analytics</li>
-            <li>Test Plans and Test Methodologies</li>
-            <li>Scenarios and Use Cases</li>
-            <li>Collaborative Team Player</li>
-            <li>Defect Tracking and Reporting</li>
-            <li>Code Cloud</li>
-            <li>Azure DevOps</li>
-            <li>Strong Problem Solver</li>
-            <li>Automation Scripting</li>
-            <li>Software Documentation Reviews</li>
-            <li>Data Analysis</li>
-            <li>Software Defect Documentation</li>
-            <li>Software Compatibility Testing</li>
-            <li>Configuration Management</li>
-            <li>Software Functionality Feedback</li>
-            <li>Product Design Reviews</li>
-            <li>Continuous-Integration Testing</li>
-            <li>Test Implementation</li>
-            <li>Client Requirements</li>
-            <li>Manual Test Case Preparation</li>
-            <li>Test Planning</li>
-            <li>Team Collaboration</li>
-            <li>Project Management</li>
-            <li>Cross-Platform Testing</li>
-            <li>Vericode Experience</li>
-            <li>Web and Mobile Application QA</li>
-            <li>Agile Best Practices</li>
-            <li>Bug Tracking and Resolution</li>
-            <li>System Modification Testing</li>
-            <li>Version Control Systems: Git</li>
-            <li>Documentation Skills</li>
-            <li>Scrum Methodology</li>
-            <li>Key Performance Indicator Tracking</li>
-            <li>Developing Quality Standards</li>
-            <li>Root Cause Analysis</li>
-            <li>Team Mentoring</li>
-            <li>Requirements Analysis</li>
-            <li>Teamwork and Positive Attitude</li>
-            <li>Defect Monitoring</li>
-            <li>Automation Knowledge</li>
-            <li>New Feature Testing</li>
-            <li>Accessibility Testing Expertise</li>
-            <li>SQL Query Expertise</li>
-            <li>REST API's calls in Postman</li>
-            <li>Curl Scripts</li>
-            <li>Software Release and Versioning</li>
-        </ul>
-    </section>
+    <div class="card">
+      <div class="exp-header">
+        <h3>Senior QA Lead — Automation &amp; Production Support</h3>
+        <span class="exp-dates">04/2008 – Present</span>
+      </div>
+      <div class="exp-company">AT&amp;T Labs &nbsp;|&nbsp; Middletown, NJ</div>
+      <ul style="margin-top:10px">
+        <li>Led cross-functional QA collaboration between developers, BAs, and QA teams globally; aligned QA roadmap with business objectives and conducted live defect triage sessions to resolve critical production issues rapidly.</li>
+        <li>Pioneered AI/GenAI QA practices — built privacy-first RAG pipelines, LLM evaluation frameworks, prompt injection security testing, and multi-LLM agent automation using Playwright, LangChain, Ollama, and ChromaDB.</li>
+        <li>Performed Root Cause Analysis (RCA) on system variances, documented corrective actions, and reduced recurring defect rates across enterprise telecom platforms.</li>
+        <li>Mentored and trained developers and QA engineers in automation frameworks, AI testing practices, and DevOps processes — fostering T-shaped skill development across cross-functional teams.</li>
+        <li>Engineered end-to-end (E2E), UI, UX, API, and data-driven test cases across web, mobile, and cloud applications using Playwright, Selenium, Python, and Appium.</li>
+        <li>Conducted full-spectrum testing: functional, regression, smoke, sanity, compatibility, cross-browser, performance, load, stress, penetration, and AI-driven testing.</li>
+        <li>Managed CI/CD pipelines on AWS and Azure DevOps; deployed and monitored Kubernetes (AKS) pods using kubectl and LENS; worked with Salesforce, MuleSoft, and ServiceNow.</li>
+        <li>Delivered 35% testing efficiency improvement and 99.8% accuracy through AI-driven automation and ML analytics-based reporting.</li>
+      </ul>
+    </div>
 
-    <section id="Experience" aria-labelledby="Experience">
-        <h6>Experience</h6>
-        <p>
-            <strong class="highlighted">AT&T Labs - Senior QA Lead Automation and Production Support</strong><br>
-            <strong class="highlighted">Middletown, NJ | 04/2008 - Present</strong>
-        </p>
-        <ul>
-            <li>Acted as key point of contact for all QA aspects of releases by providing QA services and coordinating QA resources internally and externally.</li>
-            <li>Analyzed connectivity between Conexus to Azure, Azure to Conexus, Azure to Azure.</li>
-            <li>Investigated variances, performed root-cause analysis and documented corrective actions to resolve complications.</li>
-            <li>Established metrics, applied industry best practices and developed new tools and processes.</li>
-            <li>Directed day-to-day quality assurance activities, establishing rapport with team members to facilitate effective communication and coordination.</li>
-            <li>Wrote, reviewed and approved documents to preserve quality assurance.</li>
-            <li>Established new and improved QA processes by developing test processes, test cases and assigning and executing tests.</li>
-            <li>Used SQL to validate test results and recommend corrective actions.</li>
-            <li>Managed testing initiatives, establishing metrics, standards, methodology and necessary testing precautions and scheduling execution.</li>
-            <li>Communicated directly with QA team to resolve user-reported problems and questions.</li>
-            <li>Trained developers and quality assurance team members in automation programs and processes.</li>
-            <li>Prepared automation concept and control drawings according to client specifications.</li>
-            <li>Met with quality assurance, developers and project managers to assess scope and sequence of project.</li>
-            <li>Kept on track with deadlines for development cycle times.</li>
-            <li>Reviewed all test cases and test scripts for quality and identified additional areas to review.</li>
-            <li>Created detailed test cases for use on diverse projects.</li>
-            <li>Discussed requirements and processes with project managers and developers.</li>
-            <li>Tested, automated and whitelisted software to be used in secure environments.</li>
-            <li>Performed MAT (Migration Acceptance Testing) connectivity test.</li>
-            <li>Expert in creating curl scripts and REST API's calls in Postman.</li>
-            <li>Expert in creating test scripts using Selenium, Lattice, Cucumber, Cypress, and Quick Test Professional for Features Functionality.</li>
-            <li>Created and executed JSON, JavaScript, HTML, RF API code in Soap UI & Postman.</li>
-            <li>Analyzed applications data flow in Fiddler and Wire Shark. Analyzed JSON data flow in JSON formatter and validator.</li>
-            <li>Conducted Integration, System, Functional, Soak, Sanity, Alpha, Beta, GUI, Smoke, Web Based, Database Integrity, User Acceptance (UAT), and Performance testing.</li>
-            <li>Worked on various scrum applications like Microsoft ADO (Azure DevOps), TDP (Technology Delivery Process), iTrack, JIRA, Rally, Quality Center.</li>
-            <li>Expert in installing Weekly Patch & Builds in Solaris, Linux (chef installs), and Microsoft DevOps platform. Installed NEW release code in all environments (IT, E2E, Small, Production) and in Solaris, Linux, and Microsoft DevOps platform.</li>
-            <li>Experience testing email, messaging, communication applications on email manager platform.</li>
-            <li>Performed End to End, Scrum Testing, Destructive or Failover testing to check Features functionality and Data are not lost.</li>
-            <li>Checked performance of application in backend and frontend by collecting logs and metrics and data stored in database.</li>
-            <li>Verified data correctly in Postgres, SQL, Oracle, Times Ten and Sybase Database by writing SQL queries.</li>
-            <li>Worked with external Web Client partners (WebEx, ZOOM, Intellor) and verified integration. Configured Webhook account, JWT token, and ZOOM apps in ZOOM platform.</li>
-            <li>Worked on Salesforce and Mule Soft to create customized standard objects based on business requirements.</li>
-            <li>Worked on load balancer servers to ensure all data traffic is passed correctly from one server to another server.</li>
-            <li>Experienced in implementing ServiceNow processes and functions. Performed day-to-day administration of the ServiceNow platform.</li>
-            <li>Maintained the integrity of the ServiceNow platform across production and non-production instances.</li>
-            <li>Worked on Microsoft Azure DevOps, VMSS-VM, SSH connecting to jump server, bastion, and AKS (Azure Kubernetes Services).</li>
-            <li>Analyzed applications logs in Kubernetes PODS or in ADO Insight.</li>
-            <li>Performed work on Microsoft Azure DevOps, Active Directory, and cloud and mapping account with SAML & SCIM API for ZOOM accounts.</li>
-            <li>Used Microsoft Azure DevOps to check applications logs on Insights.</li>
-            <li>Used Microsoft Azure DevOps to check Kubernetes Services which containers are up and running.</li>
-            <li>Used Microsoft Azure DevOps Instances to check which private (SSH) IP address is up and running.</li>
-            <li>Performed work on Kubernetes to check which PODS are up and running.</li>
-            <li>Performed work on Kubernetes to bring scale in deployment and bring UP and DOWN PODS.</li>
-            <li>Performed work on LENS application (which is connected to AZURE cluster) and ran command on command line to check logs and version of code installed in environment.</li>
-            <li>Executed “kubectl” command from command line and was able to access subscriptions cluster and configure Microsoft ADO.</li>
-            <li>Verified connection in Microsoft Azure DevOps by checking connection to VMSS instance: CCH server -> Jump Server -> VMSS instance.</li>
-            <li>Verified Microsoft Azure DevOps, track of releases version deployment in different environments (IT, E2E, ST-Small, Production).</li>
-            <li>Verified deployment of new release, build or patch in Microsoft Azure DevOps (Pipelines ->Releases -> Component to Deploy-> select CSMS-API->environment->Deploy).</li>
-            <li>Verified REPOS in Microsoft Azure DevOps to check which code is deployed in main branch or sub-branch. Worked as system coordinator and prepared install documents and certified new release, builds, and patches to production environment.</li>
-            <li>Conducted comprehensive penetration tests on client networks, web applications, and mobile applications.</li>
-            <li>Collaborated with cross-functional teams to develop and implement security strategies and countermeasures.</li>
-            <li>Performed comprehensive vulnerability assessments using automated tools, such as vulnerability scanners, to identify potential weaknesses in systems, networks, and applications.</li>
-            <li>Conducted manual testing to exploit identified vulnerabilities and gain unauthorized access to systems and applications. Utilized various techniques, such as privilege escalation, password cracking, and social engineering, to simulate real-world attacks.</li>
-            <li>Experienced in mobile automation tools like See Test tool.</li>
-            <li>Used Citrix server to connect to different applications in different environments.</li>
-            <li>Expert in giving Training & Overview of applications, platform, and environments to team members and customers.</li>
-        </ul>
+    <div class="card">
+      <div class="exp-header">
+        <h3>Senior Accessibility System Engineer</h3>
+        <span class="exp-dates">04/2008 – 03/2016</span>
+      </div>
+      <div class="exp-company">AT&amp;T Labs &nbsp;|&nbsp; Middletown, NJ</div>
+      <ul style="margin-top:10px">
+        <li>Conducted WCAG 2.0/2.1 accessibility testing using JAWS, NVDA, ANDI, WAVE, Axe-Core, Lighthouse, Color Contrast Analyzer, iOS VoiceOver, and Android TalkBack.</li>
+        <li>Authored comprehensive accessibility testing documentation for corporate accessibility compliance (CATO); tested applications for disabled and color-blind users across multiple platforms.</li>
+      </ul>
+    </div>
 
-        <p>
-            <strong class="highlighted">AT&T Labs - Senior Accessibility System Enginee</strong><br>
-            <strong class="highlighted">Middletown, NJ | 04/2008 - 03/2016</strong>
-        </p>
-        <ul>
-            <li>Based on Web Content Accessibility Guidelines (WCAG), wrote all accessibility testing documents.</li>
-            <li>Conducted CATO (Corporate Accessibility Technology Office) Web Accessibility testing for disabled and color-blind users using various tools such as ACID, Color Contrast, ANDI (Accessible Name & Description Inspector current page), JAWS (Job Access with Speech), Fire Eye, Firebug, WAT (Web Accessibility Toolbar), Keyboard, NVDA Screen Reader, WAVA (Web Accessibility Evaluation tool), HTML Validator.</li>
-            <li>Worked on different projects that required Accessibility compliance.</li>
-            <li>Tested accessibility and functionality of applications.</li>
-            <li>Understood accessibility testing concepts well.</li>
-            <li>Knew Accessibility Guidelines Platforms well.</li>
-            <li>Used common assistive technologies such as screen readers, magnifiers, and voice recognition products.</li>
-            <li>Tools used: ACID, Color Contrast, ANDI (Accessible Name & Description Inspector current page), JAWS (Job Access with Speech), Fire Eye, Firebug, WAT (Web Accessibility Toolbar), Keyboard, NVDA Screen Reader, WAVA (Web Accessibility Evaluation tool), HTML Validator.</li>
-        </ul>
-        
-        <p>
-        <strong class="highlighted">Northern Trust Bank - Senior QA Engineer</strong><br>
-        <strong class="highlighted">Toronto, Canada | 05/2007 - 02/2008</strong>
-        </p> 
-        <ul>
-            <li>Analyzed business requirements and technical specifications.</li>
-            <li>Wrote test cases in Quality Center and used Quick Test Professional for automated testing.</li>
-            <li>Developed and executed test scripts for manual and automated testing.</li>
-            <li>Performed GUI, Functional, and Regression testing using QTP.</li>
-            <li>Conducted walkthroughs with Business Analysts and QA managers to clarify issues.</li>
-            <li>Worked with SQL to test database integrity.</li>
-            <li>Managed test plans, test cases, and tracked defects using QC.</li>
-            <li>Executed Data-driven Testing with unique Test Data set.</li>
-            <li>Modified and updated test scripts for new functionality requirements.</li>
-            <li>Tested email and messages on ACID tool to check their flow on various platforms such as desktop, phone, and iPad.</li>
-            <li>Tested email and messages and ensured their validation compliance.</li>
-            <li>Conducted A/B user testing with two variants of email or messages.</li>
-        </ul>
-        
-        <p>
-            <strong class="highlighted">Country Wide Insurance - Software QA Test Engineer</strong><br>
-            <strong class="highlighted">Toronto, Canada | 01/2005 - 12/2006</strong>
-        </p> 
-        <ul>
-            <li>Created comprehensive test plans, test scripts, and use cases to support testing objectives.</li>
-            <li>Built automated test scripts to handle repetitive software work.</li>
-            <li>Kept scripts and test cases updated with current requirements.</li>
-            <li>Tested functionality and compatibility of new programs or updates in comparison to existing applications.</li>
-            <li>Monitored resolution of bugs, tested fixes, and helped developers tackle ongoing problems by providing QA perspective.</li>
-            <li>Provided solutions to various technical problems.</li>
-            <li>Provided technical advice to improve quality of engineering practices.</li>
-        </ul>
-        
-        <p>
-            <strong class="highlighted">FedEx - Software QA Engineer</strong><br>
-            <strong class="highlighted">Toronto, Canada | 05/2002 - 03/2005</strong>
-        </p> 
-        <ul>
-            <li>Developed and executed QA test cases, scripts, and procedures for automated and manual software maintenance.</li>
-            <li>Assessed application patches and updates at development, testing, and quality assurance stages.</li>
-            <li>Planned and devised cohesive test plans for projects using advanced testing technologies.</li>
-            <li>Collaborated with QA analysts to establish, meet, and maintain quality assurance thresholds based on best-practice tools.</li>
-            <li>Tested functionality and compatibility of new programs or updates in comparison to existing applications.</li>
-            <li>Monitored resolution of bugs, tested fixes, and helped developers tackle ongoing problems by providing QA perspective.</li>
-        </ul>
-        
-    </section>
+    <div class="card">
+      <div class="exp-header">
+        <h3>Senior QA Engineer</h3>
+        <span class="exp-dates">05/2007 – 02/2008</span>
+      </div>
+      <div class="exp-company">Northern Trust Bank &nbsp;|&nbsp; Toronto, Canada</div>
+      <ul style="margin-top:10px">
+        <li>Performed GUI, Functional, Regression, and Data-Driven testing using QTP/UFT and Quality Center for banking and wealth management applications.</li>
+        <li>Executed A/B user testing with two variants of email/messaging flows; validated cross-platform compatibility using ACID tool across desktop, phone, and iPad.</li>
+        <li>Used SQL to validate database integrity; managed test plans, test cases, and defect tracking in Quality Center.</li>
+      </ul>
+    </div>
 
-    <footer role="contentinfo">
-        <p>Contact me at: dhirajgupta@hotmail.com</p>
-        <p>
-            Follow me on YouTube: 
-            <a href="https://www.youtube.com/@JerseyMunda" class="footer-link" target="_blank" aria-label="Subscribe to Jersey Munda on YouTube">
-                <strong>Subscribe Here</strong>
-            </a>
-        </p>
-        <p>Copyright © 2024</p>
-    </footer>
+    <div class="card">
+      <div class="exp-header">
+        <h3>Software QA Test Engineer</h3>
+        <span class="exp-dates">01/2005 – 12/2006</span>
+      </div>
+      <div class="exp-company">Country Wide Insurance &nbsp;|&nbsp; Toronto, Canada</div>
+      <ul style="margin-top:10px">
+        <li>Built and maintained automated test scripts for insurance application regression and compatibility testing.</li>
+        <li>Monitored defect resolution, tested bug fixes, and provided QA perspective to developers — improving defect turnaround and overall engineering quality practices.</li>
+        <li>Created comprehensive test plans, scripts, and use cases supporting functional and compatibility testing across new and updated software releases.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="exp-header">
+        <h3>Software QA Engineer</h3>
+        <span class="exp-dates">05/2002 – 03/2005</span>
+      </div>
+      <div class="exp-company">FedEx &nbsp;|&nbsp; Toronto, Canada</div>
+      <ul style="margin-top:10px">
+        <li>Developed and executed QA test cases, scripts, and procedures for automated and manual testing of logistics and supply chain software.</li>
+        <li>Collaborated with QA analysts to establish quality thresholds; monitored defect resolution and provided ongoing QA support to development teams.</li>
+        <li>Planned and devised cohesive test plans using advanced testing technologies across development, testing, and QA stages.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="cert-list">
+      <div class="cert-card">
+        <h4>Project Management Professional (PMP)</h4>
+        <span>Project Management Institute</span>
+      </div>
+      <div class="cert-card">
+        <h4>Certified Scrum Master (CSM)</h4>
+        <span>Scrum Alliance</span>
+      </div>
+      <div class="cert-card">
+        <h4>Certified Scrum Product Owner (CSPO)</h4>
+        <span>Scrum Alliance</span>
+      </div>
+      <div class="cert-card">
+        <h4>Microsoft Azure Fundamentals (AZ-900)</h4>
+        <span>Microsoft</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>DeVry University &nbsp;|&nbsp; Ontario, Canada &nbsp;|&nbsp; 2004</h3>
+      <ul style="margin-top:8px">
+        <li>Bachelor of Science — Computer Science</li>
+        <li>Bachelor of Science — Electronics Engineering</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>Dhiraj Gupta &nbsp;|&nbsp; <a href="mailto:dhirajgupta@hotmail.com">dhirajgupta@hotmail.com</a> &nbsp;|&nbsp; <a href="https://github.com/rinkugupta3" target="_blank">github.com/rinkugupta3</a></p>
+  <p style="margin-top:6px;font-size:.8rem;opacity:.7">YouTube: <a href="https://www.youtube.com/@JerseyMunda" target="_blank">@JerseyMunda</a> &nbsp;|&nbsp; &copy; 2025</p>
+</footer>
+
 </body>
 </html>
