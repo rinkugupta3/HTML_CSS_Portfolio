@@ -1,328 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dhiraj Gupta | Senior QA Automation Engineer</title>
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f7fa;color:#333;line-height:1.6}
-    header{background:linear-gradient(135deg,#1F4E79,#2E75B6);color:#fff;padding:40px 0;text-align:center}
-    header h1{font-size:2.4rem;font-weight:700;letter-spacing:1px}
-    header .subtitle{font-size:1.05rem;margin-top:8px;opacity:.9}
-    header .contact{margin-top:14px;font-size:.95rem;opacity:.85}
-    header .contact a{color:#BDD7EE;text-decoration:none}
-    header .contact a:hover{text-decoration:underline}
-    nav{background:#1F4E79;position:sticky;top:0;z-index:100;text-align:center;padding:10px 0;box-shadow:0 2px 6px rgba(0,0,0,.3)}
-    nav a{color:#BDD7EE;text-decoration:none;margin:0 12px;font-size:.9rem;font-weight:500;transition:color .2s}
-    nav a:hover{color:#fff}
-    .container{max-width:1000px;margin:0 auto;padding:30px 20px}
-    section{margin-bottom:36px}
-    h2{font-size:1.3rem;font-weight:700;color:#1F4E79;border-bottom:3px solid #2E75B6;padding-bottom:6px;margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em}
-    h3{font-size:1.05rem;font-weight:600;color:#1F4E79;margin-bottom:4px}
-    p{color:#555;margin-bottom:10px;font-size:.95rem}
-    ul{padding-left:20px;color:#555;font-size:.95rem}
-    ul li{margin-bottom:5px}
-    .card{background:#fff;border-radius:8px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,.08);margin-bottom:14px}
-    .skills-table{width:100%;border-collapse:collapse;font-size:.9rem}
-    .skills-table td{padding:8px 10px;border:1px solid #D6E4F0;vertical-align:top}
-    .skills-table .cat{background:#D6E4F0;color:#1F4E79;font-weight:600;width:160px;white-space:nowrap}
-    .core-comp{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .tag{background:#EBF3FB;color:#1F4E79;border:1px solid #BDD7EE;border-radius:20px;padding:4px 12px;font-size:.82rem;font-weight:500}
-    .tag.ai{background:#E1F5EE;color:#0F6E56;border-color:#5DCAA5}
-    .exp-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px}
-    .exp-company{font-size:.9rem;color:#595959;font-style:italic}
-    .exp-dates{font-size:.85rem;color:#888;white-space:nowrap}
-    .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
-    .proj-card{background:#fff;border-radius:8px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.08);border-top:3px solid #2E75B6}
-    .proj-card.ai{border-top-color:#0F6E56}
-    .proj-card h4{font-size:.95rem;font-weight:600;color:#1F4E79;margin-bottom:4px}
-    .proj-card .tech{font-size:.8rem;color:#888;font-style:italic;margin-bottom:8px}
-    .proj-card p{font-size:.85rem;color:#555;margin-bottom:10px}
-    .proj-card a{font-size:.82rem;color:#2E75B6;text-decoration:none;font-weight:500}
-    .proj-card a:hover{text-decoration:underline}
-    .cert-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-    .cert-card{background:#fff;border-radius:8px;padding:14px 16px;box-shadow:0 1px 4px rgba(0,0,0,.08);border-left:4px solid #2E75B6}
-    .cert-card h4{font-size:.92rem;font-weight:600;color:#1F4E79;margin-bottom:2px}
-    .cert-card span{font-size:.82rem;color:#888}
-    .highlight-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .highlight-item{background:#fff;border-radius:8px;padding:12px 14px;box-shadow:0 1px 4px rgba(0,0,0,.08);font-size:.88rem;color:#555;border-left:3px solid #2E75B6}
-    footer{background:#1F4E79;color:#BDD7EE;text-align:center;padding:24px;font-size:.9rem}
-    footer a{color:#BDD7EE}
-    @media(max-width:600px){
-      header h1{font-size:1.7rem}
-      .exp-header{flex-direction:column}
-      .highlight-list{grid-template-columns:1fr}
-      nav a{margin:0 6px;font-size:.8rem}
-    }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dhiraj Gupta — Senior QA Automation Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#0B1D35;--blue:#1B4F8A;--accent:#00C2A8;--gold:#E8A838;--white:#FFFFFF;--gray:#556070;--lgray:#A0AABA;--border:rgba(255,255,255,0.08)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;transition:all .3s}
+nav.scrolled{background:rgba(11,29,53,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:12px 48px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:-.01em}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:28px}
+.nav-links a{color:var(--lgray);text-decoration:none;font-size:.85rem;font-weight:500;transition:color .2s;letter-spacing:.03em}
+.nav-links a:hover{color:var(--accent)}
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:140px 24px 80px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(27,79,138,.4) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 80% 80%,rgba(0,194,168,.12) 0%,transparent 60%),linear-gradient(160deg,#0B1D35 0%,#0F2644 50%,#0B1D35 100%)}
+.ring{position:absolute;border-radius:50%;border:1px solid;animation:pulse 6s ease-in-out infinite;top:50%;left:50%;transform:translate(-50%,-50%)}
+.ring-1{width:500px;height:500px;border-color:rgba(0,194,168,.12)}
+.ring-2{width:800px;height:800px;border-color:rgba(27,79,138,.12);animation-delay:2s}
+.ring-3{width:1100px;height:1100px;border-color:rgba(0,194,168,.06);animation-delay:4s}
+@keyframes pulse{0%,100%{opacity:.4;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.015)}}
+.hero-content{position:relative;z-index:1;max-width:800px}
+.avail-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,194,168,.1);border:1px solid rgba(0,194,168,.3);border-radius:100px;padding:6px 18px;font-size:.75rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:32px;animation:fd .8s ease both}
+.avail-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+h1{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,8vw,6.5rem);font-weight:900;line-height:1.02;letter-spacing:-.03em;animation:fd .8s .1s ease both}
+h1 em{color:var(--accent);font-style:normal}
+.hero-sub{font-size:clamp(.95rem,2vw,1.15rem);color:var(--lgray);font-weight:300;margin-top:20px;letter-spacing:.02em;animation:fd .8s .2s ease both}
+.hero-sub strong{color:var(--white);font-weight:500}
+.hero-contact{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:28px;font-size:.85rem;color:var(--lgray);animation:fd .8s .3s ease both}
+.hero-contact a{color:var(--lgray);text-decoration:none;transition:color .2s}
+.hero-contact a:hover{color:var(--accent)}
+.industries{margin-top:36px;animation:fd .8s .4s ease both}
+.ind-label{font-size:.72rem;color:var(--lgray);text-transform:uppercase;letter-spacing:.14em;margin-bottom:12px}
+.ind-wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.ind{background:rgba(27,79,138,.2);border:1px solid rgba(27,79,138,.45);border-radius:100px;padding:5px 14px;font-size:.78rem;color:var(--lgray);transition:all .2s;cursor:default}
+.ind:hover{background:rgba(27,79,138,.45);color:var(--white)}
+.hero-btns{display:flex;gap:14px;justify-content:center;margin-top:40px;animation:fd .8s .5s ease both}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 30px;border-radius:100px;font-size:.88rem;font-weight:600;text-decoration:none;transition:all .25s;font-family:'DM Sans',sans-serif}
+.btn-p{background:var(--accent);color:var(--navy)}
+.btn-p:hover{background:#00ddc0;transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,194,168,.3)}
+.btn-o{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.2)}
+.btn-o:hover{background:rgba(255,255,255,.07);transform:translateY(-2px)}
+@keyframes fd{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:translateY(0)}}
+/* SECTIONS */
+section{position:relative;z-index:1;padding:100px 0}
+section:nth-child(even){background:rgba(27,79,138,.05)}
+.container{max-width:1060px;margin:0 auto;padding:0 36px}
+.sec-head{display:flex;align-items:center;gap:14px;margin-bottom:52px}
+.sec-num{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--accent);opacity:.6;flex-shrink:0}
+.sec-head h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;line-height:1}
+.sec-head::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(0,194,168,.25),transparent)}
+/* ABOUT */
+.about-card{background:linear-gradient(135deg,rgba(27,79,138,.15),rgba(0,194,168,.04));border:1px solid rgba(0,194,168,.12);border-radius:20px;padding:44px}
+.about-card p{color:rgba(255,255,255,.78);line-height:1.85;font-size:.98rem;font-weight:300}
+.about-card p+p{margin-top:18px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:36px;padding-top:36px;border-top:1px solid var(--border);background:var(--border)}
+.stat{background:rgba(11,29,53,.6);padding:24px;text-align:center}
+.stat-n{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:var(--accent);line-height:1}
+.stat-l{font-size:.78rem;color:var(--lgray);margin-top:6px;font-weight:300;line-height:1.4}
+/* COMPETENCIES */
+.comp-group{margin-bottom:40px}
+.comp-gt{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.comp-gt::after{content:'';flex:1;height:1px;background:rgba(0,194,168,.18)}
+.comp-gt.auto-gt{color:#7BB3F0}
+.comp-gt.auto-gt::after{background:rgba(123,179,240,.18)}
+.comp-gt.lead-gt{color:var(--gold)}
+.comp-gt.lead-gt::after{background:rgba(232,168,56,.18)}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{padding:9px 20px;border-radius:100px;font-size:.84rem;font-weight:500;transition:all .25s;cursor:default;position:relative;overflow:hidden}
+.tag::after{content:'';position:absolute;inset:0;opacity:0;transition:opacity .25s}
+.tag:hover::after{opacity:1}
+.tag span{position:relative;z-index:1}
+.tag.ai{background:rgba(0,194,168,.1);border:1px solid rgba(0,194,168,.32);color:var(--accent)}
+.tag.ai::after{background:var(--accent)}
+.tag.ai:hover{color:var(--navy)}
+.tag.au{background:rgba(27,79,138,.25);border:1px solid rgba(123,179,240,.3);color:#7BB3F0}
+.tag.au::after{background:#7BB3F0}
+.tag.au:hover{color:var(--navy)}
+.tag.ld{background:rgba(232,168,56,.08);border:1px solid rgba(232,168,56,.28);color:var(--gold)}
+.tag.ld::after{background:var(--gold)}
+.tag.ld:hover{color:var(--navy)}
+/* SKILLS TABLE */
+.sk-table{border-radius:14px;overflow:hidden;border:1px solid var(--border)}
+.sk-row{display:grid;grid-template-columns:170px 1fr}
+.sk-row:not(:last-child){border-bottom:1px solid var(--border)}
+.sk-cat{padding:13px 16px;font-size:.78rem;font-weight:600;color:var(--accent);background:rgba(27,79,138,.22);border-right:1px solid var(--border);display:flex;align-items:center;line-height:1.3}
+.sk-row:nth-child(even) .sk-cat{background:rgba(27,79,138,.14)}
+.sk-val{padding:13px 16px;font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.65;font-weight:300;background:rgba(27,79,138,.05)}
+.sk-row:nth-child(even) .sk-val{background:rgba(0,0,0,.1)}
+/* PROJECTS */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+.pc{background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:16px;padding:26px;transition:all .3s;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s}
+.pc:hover{background:rgba(255,255,255,.05);border-color:rgba(0,194,168,.28);transform:translateY(-5px);box-shadow:0 24px 48px rgba(0,0,0,.35)}
+.pc:hover::before{opacity:1}
+.pc.ap::before{background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.pc.mp::before{background:linear-gradient(90deg,transparent,#7BB3F0,transparent)}
+.pc:hover.mp{border-color:rgba(123,179,240,.28)}
+.pt{font-family:'DM Mono',monospace;font-size:.67rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.pc.mp .pt{color:#7BB3F0}
+.pc h4{font-size:.93rem;font-weight:600;color:var(--white);margin-bottom:6px;line-height:1.3}
+.p-tech{font-size:.76rem;color:var(--lgray);font-family:'DM Mono',monospace;margin-bottom:12px;line-height:1.5}
+.p-desc{font-size:.83rem;color:rgba(255,255,255,.55);line-height:1.65;font-weight:300;margin-bottom:18px}
+.p-link{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;color:var(--accent);text-decoration:none;font-weight:600;transition:gap .2s}
+.p-link:hover{gap:10px}
+.pc.mp .p-link{color:#7BB3F0}
+/* EXPERIENCE */
+.exp-tl{position:relative;padding-left:36px}
+.exp-tl::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:1px;background:linear-gradient(180deg,var(--accent),rgba(0,194,168,.08))}
+.exp-item{position:relative;margin-bottom:52px}
+.exp-item::before{content:'';position:absolute;left:-40px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(0,194,168,.15),0 0 14px rgba(0,194,168,.4)}
+.exp-item.old::before{background:var(--blue);box-shadow:0 0 0 3px rgba(27,79,138,.2),0 0 10px rgba(27,79,138,.3)}
+.exp-role{font-size:1.02rem;font-weight:600;color:var(--white);margin-bottom:6px}
+.exp-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}
+.exp-co{font-size:.88rem;color:var(--accent);font-weight:500}
+.exp-item.old .exp-co{color:#7BB3F0}
+.exp-pipe{color:var(--border)}
+.exp-loc{font-size:.83rem;color:var(--lgray)}
+.exp-dates{font-family:'DM Mono',monospace;font-size:.76rem;color:var(--lgray);padding:3px 10px;background:rgba(255,255,255,.05);border-radius:100px}
+.exp-ul{list-style:none}
+.exp-ul li{position:relative;padding-left:18px;color:rgba(255,255,255,.62);font-size:.87rem;line-height:1.75;margin-bottom:6px;font-weight:300}
+.exp-ul li::before{content:'›';position:absolute;left:0;color:var(--accent);font-size:1rem;line-height:1.75}
+.exp-item.old .exp-ul li::before{color:#7BB3F0}
+/* CERTS */
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.cert{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:all .25s}
+.cert:hover{background:rgba(255,255,255,.06);border-color:rgba(232,168,56,.35);transform:translateY(-3px)}
+.cert-ic{font-size:1.6rem}
+.cert-nm{font-size:.9rem;font-weight:600;color:var(--white);line-height:1.3}
+.cert-is{font-size:.78rem;color:var(--gold)}
+/* EDUCATION */
+.edu{background:linear-gradient(135deg,rgba(27,79,138,.18),rgba(0,194,168,.05));border:1px solid var(--border);border-radius:18px;padding:36px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+.edu h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--white);margin-bottom:5px}
+.edu-loc{color:var(--lgray);font-size:.9rem}
+.edu-right{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.edu-badge{background:rgba(0,194,168,.12);border:1px solid rgba(0,194,168,.25);border-radius:100px;padding:5px 16px;font-size:.78rem;color:var(--accent);font-weight:600}
+.edu-deg{display:flex;align-items:center;gap:8px;font-size:.88rem;color:rgba(255,255,255,.7)}
+.edu-deg::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+/* FOOTER */
+footer{background:rgba(0,0,0,.3);border-top:1px solid var(--border);padding:36px;text-align:center}
+footer p{color:var(--lgray);font-size:.85rem}
+footer a{color:var(--accent);text-decoration:none}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:14px 20px}.nav-links{display:none}
+  .stats{grid-template-columns:1fr 1fr}
+  .sk-row{grid-template-columns:1fr}.sk-cat{border-right:none;border-bottom:1px solid var(--border)}
+  .edu{flex-direction:column}.edu-right{align-items:flex-start}
+}
+</style>
 </head>
 <body>
 
-<header>
-  <h1>Dhiraj Gupta</h1>
-  <div class="subtitle">Senior QA Automation Engineer &nbsp;|&nbsp; AI &amp; GenAI Testing Specialist &nbsp;|&nbsp; 23+ Years</div>
-  <div class="contact">
-    Keyport, NJ &nbsp;|&nbsp; 732.599.5019 &nbsp;|&nbsp;
-    <a href="mailto:dhirajgupta@hotmail.com">dhirajgupta@hotmail.com</a> &nbsp;|&nbsp;
-    <a href="https://github.com/rinkugupta3" target="_blank">github.com/rinkugupta3</a>
+<nav id="nav">
+  <a href="#" class="nav-logo">D<span>.</span>Gupta</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#competencies">Competencies</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#education">Education</a>
   </div>
-</header>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#core">Competencies</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#experience">Experience</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#education">Education</a>
 </nav>
 
-<div class="container">
-
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-      <p>Senior QA Automation Engineer with <strong>23+ years</strong> of enterprise experience, including 17+ years at <strong>AT&amp;T Labs</strong>, specializing in AI/GenAI QA frameworks, RAG pipeline validation, and LLM evaluation. Delivered 35% testing efficiency gains and 99.8% accuracy through AI-driven automation across web, mobile, API, and cloud platforms.</p>
-      <p>T-shaped QA leader with deep automation expertise and broad cross-functional knowledge across AI, mobile, cloud, and accessibility domains. Expert in Playwright, Selenium, and Appium with deep hands-on experience building privacy-first RAG pipelines, prompt injection security testing, and multi-LLM agent automation. Proven cloud delivery on AWS and Azure with CI/CD-integrated test pipelines across Agile/SAFe and DevOps environments.</p>
-      <p>Domain expertise includes: <strong>Telecom (AT&amp;T)</strong>, <strong>Banking &amp; Wealth Management (Northern Trust)</strong>, <strong>Insurance (Country Wide)</strong>, and <strong>Logistics (FedEx)</strong>.</p>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="ring ring-1"></div><div class="ring ring-2"></div><div class="ring ring-3"></div>
+  <div class="hero-content">
+    <div class="avail-badge"><div class="avail-dot"></div>Open to New Opportunities</div>
+    <h1>Dhiraj<br/><em>Gupta</em></h1>
+    <p class="hero-sub"><strong>Senior QA Automation Engineer</strong> &nbsp;·&nbsp; <strong>AI & GenAI Testing Specialist</strong></p>
+    <div class="hero-contact">
+      <a href="tel:7325995019">📞 732.599.5019</a>
+      <a href="mailto:dhirajgupta@hotmail.com">✉ dhirajgupta@hotmail.com</a>
+      <a href="https://github.com/rinkugupta3" target="_blank">⌥ github.com/rinkugupta3</a>
+      <span>📍 Keyport, NJ</span>
     </div>
-  </section>
-
-  <!-- CORE COMPETENCIES -->
-  <section id="core">
-    <h2>Core Competencies</h2>
-    <div class="card">
-      <div class="core-comp">
-        <span class="tag ai">AI/GenAI QA</span><span class="tag ai">LLM Evaluation</span><span class="tag ai">RAG Validation</span><span class="tag ai">Prompt Injection Testing</span><span class="tag ai">LangChain</span><span class="tag ai">Ollama</span><span class="tag ai">ChromaDB</span>
-        <span class="tag">Playwright</span><span class="tag">Selenium WebDriver</span><span class="tag">Cypress</span><span class="tag">Appium</span><span class="tag">PyTest</span><span class="tag">Cucumber/BDD</span>
-        <span class="tag">E2E Testing</span><span class="tag">Cross-Browser Testing</span><span class="tag">Data-Driven Testing</span><span class="tag">UI/UX Testing</span><span class="tag">Load Testing</span><span class="tag">Performance Testing</span><span class="tag">Accessibility (WCAG)</span>
-        <span class="tag">Root Cause Analysis</span><span class="tag">Cross-Functional Leadership</span><span class="tag">Team Mentoring</span><span class="tag">Test Planning</span><span class="tag">Defect Tracking</span>
-        <span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span>
-        <span class="tag">Kubernetes/AKS</span><span class="tag">Salesforce</span><span class="tag">ServiceNow</span><span class="tag">AWS</span><span class="tag">Azure DevOps</span><span class="tag">Docker</span><span class="tag">CI/CD</span><span class="tag">Agile/SAFe</span><span class="tag">API Testing</span><span class="tag">Mobile Testing</span>
+    <div class="industries">
+      <p class="ind-label">Industry Expertise</p>
+      <div class="ind-wrap">
+        <span class="ind">Telecom</span><span class="ind">Banking & Wealth Management</span><span class="ind">Insurance</span><span class="ind">Logistics</span><span class="ind">Healthcare</span><span class="ind">Financial Services</span><span class="ind">SaaS</span><span class="ind">E-Commerce</span>
       </div>
     </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Skills &amp; Abilities</h2>
-    <div class="card">
-      <table class="skills-table">
-        <tr><td class="cat">AI &amp; GenAI</td><td>LLM Evaluation, RAG Pipelines, LangChain, Ollama, CrewAI, Gemma, ChromaDB, Semantic Similarity, Prompt Injection Security, GenAI QA, NLP Integration, AI Model A/B Testing, AI-Driven Test Generation</td></tr>
-        <tr><td class="cat">AI IDEs &amp; Agents</td><td>Cursor AI, Google Antigravity, Codeium Windsurf, Claude Code, GitHub Copilot, VS Code Copilot, Google AI Studio</td></tr>
-        <tr><td class="cat">Automation Tools</td><td>Playwright, Selenium WebDriver, Cypress, Appium, PyTest, Cucumber/BDD, UFT, QTP, GEB, Groovy, Spock, JMeter, LoadRunner, SoapUI, Swagger, Fiddler, Wireshark, Rational Robot</td></tr>
-        <tr><td class="cat">Languages &amp; API</td><td>Python, TypeScript, Java, Node.js, JavaScript, Shell, JSON, HTML, CSS, XML, REST API, SOAP, WSDL, VBScript, Curl</td></tr>
-        <tr><td class="cat">Cloud &amp; DevOps</td><td>AWS, Microsoft Azure (AKS, VMSS, VM, Bastion, Kubernetes), Azure DevOps, Docker, Jenkins, CI/CD Pipelines, ServiceNow, Salesforce, MuleSoft, Prometheus, Grafana, kubectl, LENS</td></tr>
-        <tr><td class="cat">Testing Expertise</td><td>Manual, Automation, UI, UX, API, Functional, Regression, Performance, Load, Stress, Soak, Smoke, Sanity, End-to-End (E2E), Cross-Browser, Cross-Platform, Data-Driven, Compatibility, Exploratory, Integration, System, UAT, MAT, Penetration, Contract, Negative/Boundary, White Box, Black Box, Volume, Scalability, Reliability, Recovery, Alpha, Beta, Ad-hoc, AI-Driven</td></tr>
-        <tr><td class="cat">Test Management</td><td>Jira, Zephyr, TestRail, HP ALM, Quality Center, Rally, DevOps Boards, TDP, iTrack, SharePoint, MS Project, Confluence, Trello</td></tr>
-        <tr><td class="cat">Methodologies</td><td>Agile/Scrum, SAFe, Kanban, Lean, XP, Waterfall, TDD, BDD, DevOps, SDLC, Feature Driven Development</td></tr>
-        <tr><td class="cat">Accessibility</td><td>WCAG 2.0/2.1, Axe-Core, Lighthouse, JAWS, NVDA, WAVE, ANDI, iOS VoiceOver, Android TalkBack, Fire Eye, Firebug, Color Contrast Analyzer, ACID tool</td></tr>
-        <tr><td class="cat">Databases</td><td>Oracle, PostgreSQL, MS SQL Server, MongoDB, ChromaDB, TimesTen, Sybase, MS Access, SQLite</td></tr>
-        <tr><td class="cat">Operating Systems</td><td>Windows, Unix, Linux (CLI, Scripting), Ubuntu, Microsoft Azure</td></tr>
-        <tr><td class="cat">Dev Tools</td><td>Eclipse, IntelliJ, Maven, Angular, Kafka, GitHub, Git Bash, Git Extensions, SQL Developer, TOAD, Postman, Citrix, VNC, WinSCP, FileZilla, Putty</td></tr>
-        <tr><td class="cat">Web Services</td><td>SOAP, REST, WSDL, XML, XSD, XSLT, XPATH, JSON, Postman, SoapUI, Swagger, Fiddler</td></tr>
-      </table>
+    <div class="hero-btns">
+      <a href="mailto:dhirajgupta@hotmail.com" class="btn btn-p">Get In Touch →</a>
+      <a href="https://github.com/rinkugupta3" target="_blank" class="btn btn-o">View GitHub</a>
     </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Personal Projects Portfolio</h2>
-    <p style="font-size:.85rem;color:#888;margin-bottom:14px">All projects: <a href="https://github.com/rinkugupta3" target="_blank">github.com/rinkugupta3</a></p>
-    <div class="proj-grid">
-      <div class="proj-card ai">
-        <h4>AI_RAG_Ollama_VectorLink</h4>
-        <div class="tech">Python · LangChain · Ollama · Gemma · ChromaDB · SQL Server · Playwright</div>
-        <p>Privacy-first RAG pipeline ingesting enterprise legal/technical PDFs, storing vector embeddings in SQL Server, and auto-generating Gherkin test cases and Playwright scripts — 100% local, no cloud required.</p>
-        <a href="https://github.com/rinkugupta3/AI_RAG_Ollama_VectorLink" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card ai">
-        <h4>GenAI_QA_Framework</h4>
-        <div class="tech">Python · PyTest · Playwright · Google Gemini API</div>
-        <p>Comprehensive QA framework for GenAI apps: LLM accuracy, RAG retrieval, prompt injection security, semantic similarity, and REST API SLA testing. 36 mock + 9 live Gemini API tests.</p>
-        <a href="https://github.com/rinkugupta3/GenAI_QA_Framework" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card ai">
-        <h4>AI_Agent_QA_Web_Automation_LLM</h4>
-        <div class="tech">Python · Gradio · Browser-Use · OpenAI · Anthropic · Azure · Google LLMs</div>
-        <p>Gradio-based WebUI for controlling AI agents that autonomously browse and automate web tasks. Supports multiple LLM providers, persistent browser sessions, and HD screen recording.</p>
-        <a href="https://github.com/rinkugupta3/AI_Agent_QA_Web_Automation_LLM_BrowserUse_WebUI" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card ai">
-        <h4>AutoJobSearch_Antigravity</h4>
-        <div class="tech">Python · Playwright · Regex · Gmail SMTP · Windows Task Scheduler</div>
-        <p>AI-powered job market intelligence tool: automates LinkedIn searches with native event simulation, regex filtering for senior/lead roles, session injection, and scheduled daily HTML email reports.</p>
-        <a href="https://github.com/rinkugupta3/AutoJobSearch_Antigravity" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card ai">
-        <h4>AI_RAG_Ollama_LangChain_Gemma</h4>
-        <div class="tech">Python · LangChain · Ollama · Gemma · NLP</div>
-        <p>Local NLP Intelligence Engine using LangChain + Ollama + Gemma for document Q&amp;A with vector retrieval — no cloud dependency or API key required.</p>
-        <a href="https://github.com/rinkugupta3/AI_RAG_Ollama_LangChain_Gemma_NPL_LLM_VectorLink" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card ai">
-        <h4>AI_RAG_Ollama_CrewAI_Agents</h4>
-        <div class="tech">Python · CrewAI · Ollama · Gemma · LLM Agents</div>
-        <p>Multi-agent RAG system using CrewAI orchestration with locally-hosted Gemma for collaborative AI-driven document intelligence and QA test generation.</p>
-        <a href="https://github.com/rinkugupta3/AI_RAG_Ollama_CrewAI_Agents_Gemma_NPL_LLM_VectorLink" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card">
-        <h4>Playwright_Login_Logout Framework</h4>
-        <div class="tech">Playwright · Python · JSON Config · BDD</div>
-        <p>Data-driven login/logout test framework using JSON-based configuration for multi-environment and multi-credential automated test execution.</p>
-        <a href="https://github.com/rinkugupta3/Automation_Login_Logout_TestingFramework_with_Json_Config_Playwright" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card">
-        <h4>Selenium_Azure_BDD</h4>
-        <div class="tech">Selenium WebDriver · Java · Azure DevOps · Cucumber/BDD</div>
-        <p>BDD-style Selenium automation for multi-scenario web validation, integrated with Azure DevOps CI/CD pipelines for continuous test execution.</p>
-        <a href="https://github.com/rinkugupta3/Selenium_Automation_Azure_BDD_MultipleAppleSearch" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card">
-        <h4>Automation_Accessibility</h4>
-        <div class="tech">Playwright · Python · Axe-Core · WCAG 2.1</div>
-        <p>Comprehensive accessibility testing framework validating WCAG 2.1 compliance using Axe-Core and Lighthouse within Playwright for automated disability access checks.</p>
-        <a href="https://github.com/rinkugupta3/Automation_Accessibility" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card">
-        <h4>Node.js_SQL_API_Postman</h4>
-        <div class="tech">Node.js · SQL Server · REST API · Postman</div>
-        <p>Full-stack REST API server integrating Node.js with SQL Server via SSMS, with Postman test suites for endpoint validation and data integrity checks.</p>
-        <a href="https://github.com/rinkugupta3/Node-js-SQL-API-Server-Postman-SSMS-Integration" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card">
-        <h4>JMeter_Performance_Testing</h4>
-        <div class="tech">Apache JMeter · Load Testing</div>
-        <p>Enterprise performance, load, and stress testing suite using Apache JMeter for throughput benchmarking, bottleneck detection, and SLA validation.</p>
-        <a href="https://github.com/rinkugupta3/JMeter" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="proj-card">
-        <h4>Automation_Mobility_Appium</h4>
-        <div class="tech">Appium · Python/Java · Android · iOS</div>
-        <p>Mobile test automation framework for native and hybrid Android/iOS apps using Appium, covering gesture simulation and cross-platform compatibility.</p>
-        <a href="https://github.com/rinkugupta3/Automation_Mobility_Appium" target="_blank">View on GitHub →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <h2>Professional Experience</h2>
-
-    <div class="card">
-      <div class="exp-header">
-        <h3>Senior QA Lead — Automation &amp; Production Support</h3>
-        <span class="exp-dates">04/2008 – Present</span>
-      </div>
-      <div class="exp-company">AT&amp;T Labs &nbsp;|&nbsp; Middletown, NJ</div>
-      <ul style="margin-top:10px">
-        <li>Led cross-functional QA collaboration between developers, BAs, and QA teams globally; aligned QA roadmap with business objectives and conducted live defect triage sessions to resolve critical production issues rapidly.</li>
-        <li>Pioneered AI/GenAI QA practices — built privacy-first RAG pipelines, LLM evaluation frameworks, prompt injection security testing, and multi-LLM agent automation using Playwright, LangChain, Ollama, and ChromaDB.</li>
-        <li>Performed Root Cause Analysis (RCA) on system variances, documented corrective actions, and reduced recurring defect rates across enterprise telecom platforms.</li>
-        <li>Mentored and trained developers and QA engineers in automation frameworks, AI testing practices, and DevOps processes — fostering T-shaped skill development across cross-functional teams.</li>
-        <li>Engineered end-to-end (E2E), UI, UX, API, and data-driven test cases across web, mobile, and cloud applications using Playwright, Selenium, Python, and Appium.</li>
-        <li>Conducted full-spectrum testing: functional, regression, smoke, sanity, compatibility, cross-browser, performance, load, stress, penetration, and AI-driven testing.</li>
-        <li>Managed CI/CD pipelines on AWS and Azure DevOps; deployed and monitored Kubernetes (AKS) pods using kubectl and LENS; worked with Salesforce, MuleSoft, and ServiceNow.</li>
-        <li>Delivered 35% testing efficiency improvement and 99.8% accuracy through AI-driven automation and ML analytics-based reporting.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="exp-header">
-        <h3>Senior Accessibility System Engineer</h3>
-        <span class="exp-dates">04/2008 – 03/2016</span>
-      </div>
-      <div class="exp-company">AT&amp;T Labs &nbsp;|&nbsp; Middletown, NJ</div>
-      <ul style="margin-top:10px">
-        <li>Conducted WCAG 2.0/2.1 accessibility testing using JAWS, NVDA, ANDI, WAVE, Axe-Core, Lighthouse, Color Contrast Analyzer, iOS VoiceOver, and Android TalkBack.</li>
-        <li>Authored comprehensive accessibility testing documentation for corporate accessibility compliance (CATO); tested applications for disabled and color-blind users across multiple platforms.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="exp-header">
-        <h3>Senior QA Engineer</h3>
-        <span class="exp-dates">05/2007 – 02/2008</span>
-      </div>
-      <div class="exp-company">Northern Trust Bank &nbsp;|&nbsp; Toronto, Canada</div>
-      <ul style="margin-top:10px">
-        <li>Performed GUI, Functional, Regression, and Data-Driven testing using QTP/UFT and Quality Center for banking and wealth management applications.</li>
-        <li>Executed A/B user testing with two variants of email/messaging flows; validated cross-platform compatibility using ACID tool across desktop, phone, and iPad.</li>
-        <li>Used SQL to validate database integrity; managed test plans, test cases, and defect tracking in Quality Center.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="exp-header">
-        <h3>Software QA Test Engineer</h3>
-        <span class="exp-dates">01/2005 – 12/2006</span>
-      </div>
-      <div class="exp-company">Country Wide Insurance &nbsp;|&nbsp; Toronto, Canada</div>
-      <ul style="margin-top:10px">
-        <li>Built and maintained automated test scripts for insurance application regression and compatibility testing.</li>
-        <li>Monitored defect resolution, tested bug fixes, and provided QA perspective to developers — improving defect turnaround and overall engineering quality practices.</li>
-        <li>Created comprehensive test plans, scripts, and use cases supporting functional and compatibility testing across new and updated software releases.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="exp-header">
-        <h3>Software QA Engineer</h3>
-        <span class="exp-dates">05/2002 – 03/2005</span>
-      </div>
-      <div class="exp-company">FedEx &nbsp;|&nbsp; Toronto, Canada</div>
-      <ul style="margin-top:10px">
-        <li>Developed and executed QA test cases, scripts, and procedures for automated and manual testing of logistics and supply chain software.</li>
-        <li>Collaborated with QA analysts to establish quality thresholds; monitored defect resolution and provided ongoing QA support to development teams.</li>
-        <li>Planned and devised cohesive test plans using advanced testing technologies across development, testing, and QA stages.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <div class="cert-list">
-      <div class="cert-card">
-        <h4>Project Management Professional (PMP)</h4>
-        <span>Project Management Institute</span>
-      </div>
-      <div class="cert-card">
-        <h4>Certified Scrum Master (CSM)</h4>
-        <span>Scrum Alliance</span>
-      </div>
-      <div class="cert-card">
-        <h4>Certified Scrum Product Owner (CSPO)</h4>
-        <span>Scrum Alliance</span>
-      </div>
-      <div class="cert-card">
-        <h4>Microsoft Azure Fundamentals (AZ-900)</h4>
-        <span>Microsoft</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education">
-    <h2>Education</h2>
-    <div class="card">
-      <h3>DeVry University &nbsp;|&nbsp; Ontario, Canada &nbsp;|&nbsp; 2004</h3>
-      <ul style="margin-top:8px">
-        <li>Bachelor of Science — Computer Science</li>
-        <li>Bachelor of Science — Electronics Engineering</li>
-      </ul>
-    </div>
-  </section>
-
+  </div>
 </div>
 
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-num">01</span><h2>About Me</h2></div>
+    <div class="about-card reveal">
+      <p>Results-driven Senior QA Automation Engineer with <strong style="color:var(--accent)">10+ years</strong> of progressive enterprise experience, specializing in AI/GenAI QA frameworks, RAG pipeline validation, and LLM evaluation. Delivered measurable business outcomes through AI-driven automation across web, mobile, API, and cloud platforms.</p>
+      <p>T-shaped QA leader with deep automation expertise and broad cross-functional knowledge across AI, mobile, cloud, and accessibility domains. Expert in building privacy-first RAG pipelines, prompt injection security testing, and multi-LLM agent automation — with proven cloud delivery on AWS and Azure with CI/CD-integrated test pipelines across Agile/SAFe and DevOps environments.</p>
+      <div class="stats">
+        <div class="stat"><div class="stat-n">35%</div><div class="stat-l">Testing Efficiency Gain</div></div>
+        <div class="stat"><div class="stat-n">99.8%</div><div class="stat-l">Accuracy Achieved</div></div>
+        <div class="stat"><div class="stat-n">50%</div><div class="stat-l">Test Design Time Reduced</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETENCIES -->
+<section id="competencies">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-num">02</span><h2>Core Competencies</h2></div>
+    <div class="comp-group reveal">
+      <div class="comp-gt">AI & GenAI Expertise</div>
+      <div class="tags">
+        <div class="tag ai"><span>AI/GenAI QA</span></div><div class="tag ai"><span>LLM Evaluation</span></div><div class="tag ai"><span>RAG Validation</span></div><div class="tag ai"><span>Prompt Injection Testing</span></div><div class="tag ai"><span>Hallucination Detection</span></div><div class="tag ai"><span>LangChain</span></div><div class="tag ai"><span>Ollama</span></div><div class="tag ai"><span>ChromaDB</span></div><div class="tag ai"><span>Semantic Similarity Testing</span></div>
+      </div>
+    </div>
+    <div class="comp-group reveal">
+      <div class="comp-gt auto-gt">Automation & Testing</div>
+      <div class="tags">
+        <div class="tag au"><span>Playwright</span></div><div class="tag au"><span>Selenium WebDriver</span></div><div class="tag au"><span>Cypress</span></div><div class="tag au"><span>Appium</span></div><div class="tag au"><span>PyTest</span></div><div class="tag au"><span>TypeScript</span></div><div class="tag au"><span>Python</span></div><div class="tag au"><span>E2E Testing</span></div><div class="tag au"><span>Cross-Browser Testing</span></div><div class="tag au"><span>Performance & Load Testing</span></div><div class="tag au"><span>Accessibility Testing (WCAG)</span></div><div class="tag au"><span>Mobile Testing</span></div>
+      </div>
+    </div>
+    <div class="comp-group reveal">
+      <div class="comp-gt lead-gt">Leadership & Delivery</div>
+      <div class="tags">
+        <div class="tag ld"><span>Root Cause Analysis (RCA)</span></div><div class="tag ld"><span>Cross-Functional Leadership</span></div><div class="tag ld"><span>QA Roadmap Alignment</span></div><div class="tag ld"><span>Team Mentoring</span></div><div class="tag ld"><span>Agile/SAFe</span></div><div class="tag ld"><span>CI/CD Pipelines</span></div><div class="tag ld"><span>AWS</span></div><div class="tag ld"><span>Azure DevOps</span></div><div class="tag ld"><span>Kubernetes/AKS</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-num">03</span><h2>Skills & Abilities</h2></div>
+    <div class="sk-table reveal">
+      <div class="sk-row"><div class="sk-cat">AI & GenAI</div><div class="sk-val">LLM Evaluation, RAG Pipelines, LangChain, Ollama, CrewAI, Gemma, ChromaDB, Semantic Similarity, Prompt Injection Security, GenAI QA, NLP Integration, AI Model A/B Testing, AI-Driven Test Generation, Hallucination Detection</div></div>
+      <div class="sk-row"><div class="sk-cat">AI IDEs & Agents</div><div class="sk-val">Cursor AI, Google Antigravity, Codeium Windsurf, Claude Code, GitHub Copilot, VS Code Copilot, Google AI Studio</div></div>
+      <div class="sk-row"><div class="sk-cat">Automation Tools</div><div class="sk-val">Playwright, Selenium WebDriver, Cypress, Appium, PyTest, Cucumber/BDD, UFT, QTP, GEB, Groovy, Spock, JMeter, LoadRunner, SoapUI, Swagger, Fiddler, Wireshark, Rational Robot, See Test (Mobile)</div></div>
+      <div class="sk-row"><div class="sk-cat">Languages & API</div><div class="sk-val">Python, TypeScript, Java, Node.js, JavaScript, Shell, JSON, HTML, CSS, XML, REST API, SOAP, WSDL, XSD, XSLT, XPath, VBScript, Curl</div></div>
+      <div class="sk-row"><div class="sk-cat">Cloud & DevOps</div><div class="sk-val">AWS, Microsoft Azure (AKS, VMSS, VM, Bastion, Kubernetes), Azure DevOps, Docker, Jenkins, CI/CD Pipelines, ServiceNow, Salesforce, MuleSoft, Prometheus, Grafana, kubectl, LENS, Kafka</div></div>
+      <div class="sk-row"><div class="sk-cat">Testing Expertise</div><div class="sk-val">Manual, Automation, UI, UX, Functional, Regression, Performance, Load, Stress, Soak, Smoke, Sanity, E2E, Cross-Browser, Cross-Platform, Data-Driven, Keyword-Driven, Compatibility, Exploratory, Ad-hoc, Integration, System, UAT, MAT, Penetration, Security, Contract, Negative/Boundary, White Box, Black Box, Volume, Scalability, Reliability, Recovery, Alpha, Beta, AI-Driven, Accessibility, Mobile, API, Database, GUI</div></div>
+      <div class="sk-row"><div class="sk-cat">Test Management</div><div class="sk-val">Jira, Zephyr, TestRail, HP ALM, Quality Center, Rally, Azure DevOps Boards, TDP, iTrack, SharePoint, MS Project, Confluence, Trello, MS Visio</div></div>
+      <div class="sk-row"><div class="sk-cat">Methodologies</div><div class="sk-val">Agile/Scrum, SAFe, Kanban, Lean, XP, Waterfall, TDD, BDD, DevOps, SDLC, STLC, Feature Driven Development, CI/CD</div></div>
+      <div class="sk-row"><div class="sk-cat">Accessibility</div><div class="sk-val">WCAG 2.0/2.1, Axe-Core, Lighthouse, JAWS, NVDA, WAVE, ANDI, iOS VoiceOver, Android TalkBack, Fire Eye, Firebug, Color Contrast Analyzer, ACID Tool, WAT, HTML Validator</div></div>
+      <div class="sk-row"><div class="sk-cat">Databases</div><div class="sk-val">Oracle, PostgreSQL, MS SQL Server, MongoDB, ChromaDB, TimesTen, Sybase, MS Access, SQLite, SQL Developer, TOAD for Sybase, SSMS</div></div>
+      <div class="sk-row"><div class="sk-cat">Web Services</div><div class="sk-val">SOAP, REST, WSDL, XML, XSD, XSLT, XPath, JSON, Postman, SoapUI, Swagger, Fiddler, Wireshark, Webhook, JWT Token</div></div>
+      <div class="sk-row"><div class="sk-cat">Operating Systems</div><div class="sk-val">Windows, Unix, Linux (CLI & Scripting), Ubuntu, Solaris, Microsoft Azure</div></div>
+      <div class="sk-row"><div class="sk-cat">Dev & Source Tools</div><div class="sk-val">Eclipse, IntelliJ, Maven, Angular, Kafka, GitHub, Git Bash, Git Extensions, SQL Developer, TOAD, Postman, Citrix, VNC, WinSCP, FileZilla, Putty, Mremote, Telnet, SSH, FTP, SFTP</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-num">04</span><h2>Projects Portfolio</h2></div>
+    <p class="reveal" style="color:var(--lgray);margin-bottom:32px;font-size:.88rem">Full portfolio: <a href="https://github.com/rinkugupta3" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500">github.com/rinkugupta3 →</a></p>
+    <div class="proj-grid">
+      <div class="pc ap reveal"><div class="pt">AI · RAG · Vector DB</div><h4>AI_RAG_Ollama_VectorLink</h4><div class="p-tech">Python · LangChain · Ollama · Gemma · ChromaDB · SQL Server · Playwright</div><p class="p-desc">Privacy-first RAG pipeline ingesting enterprise PDFs, auto-generating Gherkin test cases and Playwright scripts — 100% local, no cloud required.</p><a href="https://github.com/rinkugupta3/AI_RAG_Ollama_VectorLink" target="_blank" class="p-link">View on GitHub →</a></div>
+      <div class="pc ap reveal"><div class="pt">AI · GenAI QA · LLM</div><h4>GenAI_QA_Framework</h4><div class="p-tech">Python · PyTest · Playwright · Google Gemini API</div><p class="p-desc">QA framework for GenAI apps: LLM accuracy, RAG retrieval, prompt injection security, semantic similarity. 36 mock + 9 live Gemini API tests.</p><a href="https://github.com/rinkugupta3/GenAI_QA_Framework" target="_blank" class="p-link">View on GitHub →</a></div>
+      <div class="pc ap reveal"><div class="pt">AI Agents · Multi-LLM</div><h4>AI_Agent_QA_Web_Automation</h4><div class="p-tech">Python · Gradio · Browser-Use · OpenAI · Anthropic · Azure · Google</div><p class="p-desc">Gradio-based WebUI for AI agents autonomously browsing and automating web tasks. Supports multiple LLM providers and HD screen recording.</p><a href="https://github.com/rinkugupta3/AI_Agent_QA_Web_Automation_LLM_BrowserUse_WebUI" target="_blank" class="p-link">View on GitHub →</a></div>
+      <div class="pc ap reveal"><div class="pt">AI · Job Intelligence</div><h4>AutoJobSearch_Antigravity</h4><div class="p-tech">Python · Playwright · Regex · Gmail SMTP · Task Scheduler</div><p class="p-desc">AI-powered job market intelligence: automates LinkedIn searches, regex filtering for senior roles, and scheduled daily HTML email reports.</p><a href="https://github.com/rinkugupta3/AutoJobSearch_Antigravity" target="_blank" class="p-link">View on GitHub →</a></div>
+      <div class="pc ap reveal"><div class="pt">AI · NLP · Local LLM</div><h4>AI_RAG_Ollama_LangChain_Gemma</h4><div class="p-tech">Python · LangChain · Ollama · Gemma · NLP</div><p class="p-desc">Local NLP Intelligence Engine using LangChain + Ollama + Gemma for document Q&A with vector retrieval — no cloud required.</p><a href="https://github.com/rinkugupta3/AI_RAG_Ollama_LangChain_Gemma_NPL_LLM_VectorLink" target="_blank" class="p-link">View on GitHub →</a></div>
+      <div class="pc ap reveal"><div class="pt">AI · Multi-Agent · CrewAI</div><h4>AI_RAG_Ollama_CrewAI_Agents</h4><div class="p-tech">Python · CrewAI · Ollama · Gemma · LLM Agents</div><p class="p-desc">Multi-agent RAG system using CrewAI orchestration with locally-hosted Gemma for collaborative AI-driven document intelligence.</p><a href="https://github.com/rinkugupta3/AI_RAG_Ollama_CrewAI_Agents_Gemma_NPL_LLM_VectorLink" target="_blank" class="p-link">View on GitHub →</a></div>
+      <div class="pc mp reveal"><div class="pt">Playwright · BDD · Data-Driven</div><h4>Playwright_Login_Logout_Framework</h4><div class="p-tech">Playwright · Python · JSON Config · BDD</div><p class="p-desc">Data-driven login/logout test framework using JSON-based configuration for multi-environment and multi-credential automated execution.</p><a href="https://github.com/rinkugupta3/Automation_Login_Logout_TestingFramework_with_Json_Config_Playwright" target="_blank" class="p-link">View on GitHub →</a></div>
+      <div class="pc mp reveal"><div class="pt">Selenium · Azure · BDD</div><h4>Selenium_Azure_BDD</h4><div class="p-tech">Selenium WebDriver · Java · Azure DevOps · Cucumber/BDD</div><p class="p-desc">BDD-style Selenium automation for web validation, integrated with Azure DevOps CI/CD pipelines for continuous test execution.</p><a href="https://github.com/rinkugupta3/Selenium_Automation_Azure_BDD_MultipleAppleSearch" target="_blank" class="p-link">View on GitHub →</a></div>
+      <div class="pc mp reveal"><div class="pt">Accessibility · WCAG · Axe-Core</div><h4>Automation_Accessibility</h4><div class="p-tech">Playwright · Python · Axe-Core · WCAG 2.1</div><p class="p-desc">Accessibility testing framework validating WCAG 2.1 compliance using Axe-Core and Lighthouse within Playwright.</p><a href="https://github.com/rinkugupta3/Automation_Accessibility" target="_blank" class="p-link">View on GitHub →</a></div>
+      <div class="pc mp reveal"><div class="pt">Node.js · REST API · SQL</div><h4>Node.js_SQL_API_Postman</h4><div class="p-tech">Node.js · SQL Server · REST API · Postman</div><p class="p-desc">Full-stack REST API server integrating Node.js with SQL Server, with Postman test suites for endpoint validation and data integrity.</p><a href="https://github.com/rinkugupta3/Node-js-SQL-API-Server-Postman-SSMS-Integration" target="_blank" class="p-link">View on GitHub →</a></div>
+      <div class="pc mp reveal"><div class="pt">Performance · Load · JMeter</div><h4>JMeter_Performance_Testing</h4><div class="p-tech">Apache JMeter · Load & Performance Testing</div><p class="p-desc">Enterprise performance, load, and stress testing suite for throughput benchmarking, bottleneck detection, and SLA validation.</p><a href="https://github.com/rinkugupta3/JMeter" target="_blank" class="p-link">View on GitHub →</a></div>
+      <div class="pc mp reveal"><div class="pt">Mobile · Appium · iOS · Android</div><h4>Automation_Mobility_Appium</h4><div class="p-tech">Appium · Python/Java · Android · iOS</div><p class="p-desc">Mobile test automation for native and hybrid Android/iOS apps using Appium, covering gesture simulation and cross-platform compatibility.</p><a href="https://github.com/rinkugupta3/Automation_Mobility_Appium" target="_blank" class="p-link">View on GitHub →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-num">05</span><h2>Experience</h2></div>
+    <div class="exp-tl">
+      <div class="exp-item reveal">
+        <div class="exp-role">Senior QA Lead — Automation & Production Support</div>
+        <div class="exp-meta"><span class="exp-co">AT&T Labs</span><span class="exp-pipe">|</span><span class="exp-loc">Middletown, NJ</span><span class="exp-dates">2016 – Present</span></div>
+        <ul class="exp-ul">
+          <li>Led cross-functional QA collaboration between developers, BAs, and QA teams globally; aligned QA roadmap with business objectives and conducted live defect triage to resolve critical production issues rapidly.</li>
+          <li>Architected AI/GenAI QA frameworks for RAG validation, optimizing retrieval accuracy from vector databases (ChromaDB, pgvector) and ensuring LLM response integrity.</li>
+          <li>Drove 35% testing efficiency gain and 99.8% accuracy; reduced test design time by 50% and defect resolution by 45% through AI-driven automation.</li>
+          <li>Engineered E2E, UI, UX, API, and data-driven test cases across web, mobile, and cloud using Playwright, Selenium, Python, and Appium with full cross-browser coverage.</li>
+          <li>Performed Root Cause Analysis (RCA) on system variances; mentored QA engineers in automation, AI testing, and DevOps practices.</li>
+          <li>Managed CI/CD pipelines on AWS and Azure DevOps; deployed Kubernetes (AKS) pods; worked with Salesforce, MuleSoft, ServiceNow, and Kafka integration testing.</li>
+        </ul>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-role">Senior QA & Accessibility System Engineer</div>
+        <div class="exp-meta"><span class="exp-co">AT&T Labs</span><span class="exp-pipe">|</span><span class="exp-loc">Middletown, NJ</span><span class="exp-dates">2008 – 2016</span></div>
+        <ul class="exp-ul">
+          <li>Conducted WCAG 2.0/2.1 accessibility testing using JAWS, NVDA, ANDI, WAVE, Axe-Core, iOS VoiceOver, and Android TalkBack across enterprise applications.</li>
+          <li>Authored corporate accessibility testing documentation (CATO); performed Integration, System, Functional, UAT, Performance, and E2E testing across telecom platforms.</li>
+        </ul>
+      </div>
+      <div class="exp-item old reveal">
+        <div class="exp-role">Senior QA Engineer</div>
+        <div class="exp-meta"><span class="exp-co">Northern Trust Bank</span><span class="exp-pipe">|</span><span class="exp-loc">Toronto, Canada</span><span class="exp-dates">05/2007 – 02/2008</span></div>
+        <ul class="exp-ul">
+          <li>Performed GUI, Functional, Regression, and Data-Driven testing using QTP/UFT and Quality Center for banking and wealth management applications.</li>
+          <li>Executed A/B user testing; validated cross-platform compatibility using ACID tool; used SQL for database integrity validation.</li>
+        </ul>
+      </div>
+      <div class="exp-item old reveal">
+        <div class="exp-role">Software QA Test Engineer</div>
+        <div class="exp-meta"><span class="exp-co">Country Wide Insurance</span><span class="exp-pipe">|</span><span class="exp-loc">Toronto, Canada</span><span class="exp-dates">01/2005 – 12/2006</span></div>
+        <ul class="exp-ul">
+          <li>Built and maintained automated test scripts for insurance application regression and compatibility testing.</li>
+          <li>Created comprehensive test plans, scripts, and use cases; provided QA advice to improve engineering quality practices.</li>
+        </ul>
+      </div>
+      <div class="exp-item old reveal">
+        <div class="exp-role">Software QA Engineer</div>
+        <div class="exp-meta"><span class="exp-co">FedEx</span><span class="exp-pipe">|</span><span class="exp-loc">Toronto, Canada</span><span class="exp-dates">05/2002 – 03/2005</span></div>
+        <ul class="exp-ul">
+          <li>Developed and executed QA test cases, scripts, and procedures for automated and manual testing of logistics and supply chain software.</li>
+          <li>Collaborated with QA analysts to establish quality thresholds; monitored defect resolution and provided ongoing QA support.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-num">06</span><h2>Certifications</h2></div>
+    <div class="certs-grid">
+      <div class="cert reveal"><div class="cert-ic">🏆</div><div class="cert-nm">Project Management Professional (PMP)</div><div class="cert-is">Project Management Institute</div></div>
+      <div class="cert reveal"><div class="cert-ic">⚡</div><div class="cert-nm">Certified Scrum Master (CSM)</div><div class="cert-is">Scrum Alliance</div></div>
+      <div class="cert reveal"><div class="cert-ic">🎯</div><div class="cert-nm">Certified Scrum Product Owner (CSPO)</div><div class="cert-is">Scrum Alliance</div></div>
+      <div class="cert reveal"><div class="cert-ic">☁️</div><div class="cert-nm">Microsoft Azure Fundamentals (AZ-900)</div><div class="cert-is">Microsoft</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-num">07</span><h2>Education</h2></div>
+    <div class="edu reveal">
+      <div>
+        <h3>DeVry University</h3>
+        <div class="edu-loc">Ontario, Canada &nbsp;·&nbsp; 2004</div>
+      </div>
+      <div class="edu-right">
+        <span class="edu-badge">Double Major — Bachelor of Science</span>
+        <div class="edu-deg">Computer Science</div>
+        <div class="edu-deg">Electronics Engineering</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <p>Dhiraj Gupta &nbsp;|&nbsp; <a href="mailto:dhirajgupta@hotmail.com">dhirajgupta@hotmail.com</a> &nbsp;|&nbsp; <a href="https://github.com/rinkugupta3" target="_blank">github.com/rinkugupta3</a></p>
-  <p style="margin-top:6px;font-size:.8rem;opacity:.7">YouTube: <a href="https://www.youtube.com/@JerseyMunda" target="_blank">@JerseyMunda</a> &nbsp;|&nbsp; &copy; 2025</p>
+  <p>Dhiraj Gupta &nbsp;·&nbsp; <a href="mailto:dhirajgupta@hotmail.com">dhirajgupta@hotmail.com</a> &nbsp;·&nbsp; <a href="https://github.com/rinkugupta3" target="_blank">github.com/rinkugupta3</a></p>
+  <p style="margin-top:8px;font-size:.8rem;opacity:.55">YouTube: <a href="https://www.youtube.com/@JerseyMunda" target="_blank">@JerseyMunda</a> &nbsp;·&nbsp; &copy; 2025</p>
 </footer>
 
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',scrollY>50)
+});
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})
+},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
 </body>
 </html>
